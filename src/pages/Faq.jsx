@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FaqImage from '../images/faq.png'
+import FaqImage from '../images/FAQ.png'
 import Questions from './FAQ/Questions'
 
 function Faq() {

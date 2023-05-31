@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactImage from "../images/contactus.png";
+import ContactImage from "../images/ContactUs.png";
 import {
   FaMailBulk,
   FaMapPin,
