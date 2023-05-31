@@ -13,7 +13,7 @@ function MainLayout() {
     <div className="container">
       <div className="top">
         <Upper />
-        <Navbar />
+        <NavBar />
       </div>
       <div className="content">
         <Outlet />
