@@ -3,7 +3,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import data from "../assets/Data";
 
-import "../styling/productlayout.css";
+import "../styling/Productlayout.css";
 import Content from "../Contents";
 
 function ProductLayout() {

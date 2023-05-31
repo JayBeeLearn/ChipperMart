@@ -3,7 +3,7 @@ import { FaCaretRight, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import data from "../assets/Data";
 
-import "../styling/checkout.css";
+import "../styling/Checkout.css";
 import Checkout from "../pages/checkout/Checkout";
 
 function CheckoutLayout() {

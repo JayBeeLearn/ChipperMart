@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./content.css";
-import { FaRegHeart } from "react-icons/fa";
-import AddToCart from "./components/AddToCart";
 
 import data from "./assets/Data";
 import Item from "./Item";
-import { Link } from "react-router-dom";
 
 // const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 // const allCategories = ['all', ...new Set(data.map((item) => item.subcategory))]

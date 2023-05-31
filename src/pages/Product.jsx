@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../assets/Data";
 import { useLoaderData, useParams } from "react-router-dom";
 
-import "../styling/product.css";
+import "../styling/Product.css";
 import {
   FaFacebook,
   FaGlobe,

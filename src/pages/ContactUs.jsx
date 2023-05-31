@@ -2,7 +2,6 @@ import React from "react";
 
 import ContactImage from "../images/contactus.png";
 import {
-  FaLocationArrow,
   FaMailBulk,
   FaMapPin,
   FaPhone,

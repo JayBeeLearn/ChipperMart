@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styling/components.css";
 
-import data from "../../assets/Data";
+// import data from "../../assets/Data";
 import CartItem from "./CartItem";
 
 function Cart({ filterProducts }) {

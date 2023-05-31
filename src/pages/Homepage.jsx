@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { FaSearch, FaHome } from "react-icons/fa";
+import {  FaHome } from "react-icons/fa";
 
 import AdImage from "../images/adimage.jpg";
 import Easter from "../images/easter.png";

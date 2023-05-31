@@ -4,7 +4,7 @@ import "../styling/layout.css";
 import Android from "../images/playstore.png";
 import Apple from "../images/applestore.png";
 import LogoWhite from "../images/logo-white.png";
-import App from "../App";
+// import App from "../App";
 import { Link } from "react-router-dom";
 
 function Footer() {

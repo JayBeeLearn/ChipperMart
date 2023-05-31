@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
-import '../styling/policy.css'
+import '../styling/Policy.css'
 
 function PolicyLayout() {
   return (

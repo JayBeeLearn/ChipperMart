@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cart from "../pages/cart/Cart";
 import data from "../assets/Data";
 
-import "../styling/cart.css";
+import "../styling/Cart.css";
 import { Link } from "react-router-dom";
 
 function MyCartLayout() {
