@@ -1,6 +1,7 @@
 import React from "react";
 
-import Upper from "./Upper";
+// import Upper from "./Upper";
+import Upper from './Upper'
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import { Outlet } from "react-router-dom";
