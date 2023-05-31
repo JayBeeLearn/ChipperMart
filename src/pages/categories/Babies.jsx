@@ -3,15 +3,11 @@ import React, { useState } from "react";
 import "../../styling/ContentLayout.css";
 import data from "../../assets/Data";
 
-//navs
-import Upper from "../../layout/Upper";
-import Navbar from "../../layout/Navbar";
-import Footer from "../../layout/footer";
+
 
 import Content from "../../Contents";
 
 // links
-import { Link, NavLink } from "react-router-dom";
 
 // icons
 import { FaBaby } from "react-icons/fa";

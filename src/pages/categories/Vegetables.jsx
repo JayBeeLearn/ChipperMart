@@ -6,8 +6,7 @@ import data from "../../assets/Data";
 
 import Content from "../../Contents";
 
-// links
-import { Link, NavLink } from "react-router-dom";
+
 
 // icons
 import { FaBaby, FaLeaf } from "react-icons/fa";
