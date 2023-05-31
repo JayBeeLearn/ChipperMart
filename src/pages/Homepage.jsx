@@ -6,10 +6,8 @@ import AdImage from "../images/adimage.jpg";
 import Easter from "../images/easter.png";
 import Exclusive from "../images/exclusive.png";
 
-import Upper from "../layout/Upper";
-import Navbar from "../layout/Navbar";
+
 import Content from "../Contents";
-import Footer from "../layout/footer";
 import data from "../assets/Data";
 
 import "../styling/ContentLayout.css";

@@ -275,3 +275,7 @@ h6 {
   background-color: transparent;
   transition: 5s;
 }
+
+.question-and-answer .answer{
+  padding-left: 1rem;
+}

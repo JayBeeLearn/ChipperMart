@@ -23,7 +23,9 @@ function QuestionItem({ id, title, info }) {
           </div>
         </div>
 
-        <div className="answer">{showAnswer && info}</div>
+        <div className="answer">
+          <p>{showAnswer && info}</p>
+        </div>
       </div>
     </>
   );
