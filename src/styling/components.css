@@ -1,0 +1,23 @@
+
+/* ADD TO MY CART BUTTON  */
+.myCart {
+  background-color: var(--primary-orange);
+  padding: 10px 15px;
+  border-radius: 7px;
+  color: var(--white);
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* THE FIRST DIV ON TOP SHOWING THE PAGE NAME  */
+
+.page-title {
+  background-color: #0c002e;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  /* width: 98vw; */
+}
+

@@ -1,0 +1,44 @@
+
+
+.profile{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.profile-navigation{
+    width: 30%;
+    background-color: #fff;
+    /* padding: 10px 32px; */
+    border-radius: 5px;
+}
+
+.profile-navigation li{
+    list-style-type: none;
+    margin: 1rem 0;
+    /* padding: 10px 0; */
+    font-weight: bold;
+}
+
+.profile-navigation li:first-child{
+    margin-top: 0;
+}
+
+.profile-navigation li a{
+    padding: 10px;
+    /* margin: .5rem; */
+}
+
+.profile-navigation .active{
+    display: block;
+    width: 100%;
+    background-color: #0f1660;
+    color: #fff;
+}
+
+.profile-content{
+    width: 68%;
+    background-color: #fff;
+    padding: 10px 32px;
+    border-radius: 5px;
+}

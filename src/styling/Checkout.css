@@ -1,0 +1,143 @@
+.checkout-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-details {
+  width: 68%;
+}
+
+.delivery-details {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  height: fit-content;
+  /* border: 2px solid gold; */
+}
+
+.details-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-title div {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  margin: 0.7rem 0;
+}
+
+.extra-instruction {
+  display: none;
+}
+
+.extra-instruction input {
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.extra-instruction p {
+  margin: 0.7rem 0;
+}
+
+.checkbox:checked ~ .extra-instruction {
+  display: block;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-charges {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-options {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  height: fit-content;
+}
+
+.paynow-option {
+  display: none;
+}
+
+#payNow:checked ~ .paynow-option {
+  display: block;
+}
+
+.payondelivery-option {
+  display: none;
+}
+
+#payOnDelivery:checked ~ .payondelivery-option {
+  display: block;
+}
+
+.coupon-input {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon-input input {
+  /* border:  none; */
+  padding: 8px 15px;
+}
+
+.input-coupon {
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 80%;
+}
+
+.apply-coupon {
+  border: 1px solid #dc5d18;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 20%;
+  background-color: transparent;
+  color: #dc5d18;
+}
+
+
+.order-btn{
+    width: 100%;
+    background-color: #dc5d18;
+    color: #fff;
+    outline: none;
+    margin: 1rem 0;
+}
+
+
+
+
+.checkout-item{
+    display: flex;
+    margin: 1rem 0;
+    margin-bottom: 2rem 0;
+}
+
+.checkout-image{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-image img{
+    width: 100%;
+
+}

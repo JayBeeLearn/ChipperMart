@@ -1,0 +1,219 @@
+.hotdeal {
+  font-size: 2rem;
+  background-color: #0f1660;
+  width: 20rem;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+
+
+.col .wishlist {
+  float: right;
+  font-size: 1.5rem;
+}
+
+.col .image {
+  width: 70%;
+  height: 50%;
+  margin: 1rem auto;
+  align-items: center;
+}
+
+.image img {
+  width: 100%;
+}
+.col .info {
+  margin: 1rem;
+}
+.col .info h5,
+h6 {
+  text-align: left;
+}
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+.info .discount {
+  text-decoration: line-through;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.add-cart{
+  width: 75%;
+}
+
+
+/* ABOUT US PAGE SECTION  */
+
+.about-us{
+  width: 100%;
+  /* heivght: 50rem; */
+  /* border: 2px solid rebeccapurple; */
+}
+
+.about-us .welcome {
+  width: 100%;
+  height: 15rem;
+/* 
+  background-image: url(../src/images/AboutUs.png), linear-gradient(to right, blue, red);
+  background-position: center;
+  background-size: cover; */
+
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.about-us .welcome{
+  background:  url(../src/images/AboutUs.png) center center, #0815ff;
+}
+
+
+
+.welcome h1{
+  align-self: center;
+  color: #fff;
+}
+
+.about-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.about-desc{
+  width: 49%;
+}
+
+
+.about-desc p{
+  margin: 1rem 0;
+}
+.about-image{
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img{
+  width: 100%;
+  align-self: center;
+}
+
+
+.goals-mission{
+  display: flex;
+  justify-content: space-between;
+}
+
+.goals, .mission{
+  width: 49%;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.partners{
+  margin: 2rem 0;
+}
+
+
+.logos{
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner-logo{
+  width: 19%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo img{
+  width: 100%;
+  align-self: center;
+}
+
+.people-comment .comments{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.people-comment .comment{
+  width: 32%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 7px;
+  text-align: center;
+}
+
+/* CONTACT US SECTION  */
+
+.contact-us .contact{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.contact .contact-form{
+  width: 49%;
+}
+
+.contact-form .form-group{
+  margin: 1rem 0;
+}
+
+.form-group input, textarea   {
+  width: 100%;
+  background-color: transparent;
+  padding: .8rem .5rem;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.form-group button{
+  width: 100%;
+  background-color: #dc5d18;
+  color: #fff;
+  
+}
+
+
+
+.contact .contact-image{
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img{
+  width: 100%;
+  align-self: center;
+}
+
+
+.contact-details{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.contact-details .location, .email, .phone{
+  width: 32%;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 7px;
+  text-align: center;
+}
