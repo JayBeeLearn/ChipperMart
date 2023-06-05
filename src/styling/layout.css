@@ -164,6 +164,7 @@ section .logo img {
     left: -245px;
     height: 100vh;
     transition: all 0.5s;
+    z-index: 5;
   }
 
   .nav-item {
