@@ -80,7 +80,7 @@ function Navbar() {
           <div className="navbar-control">
             {/* <input type="checkbox" className="checkbox" id="checkbox" /> */}
             <label
-              htmlFor="checkbox"
+              htmlFor="togglenav"
               className="navbar-toggle"
               onClick={() => {
                 const nav = document.getElementById("navlinks");

@@ -134,6 +134,7 @@ section .logo img {
   float: right;
   color: #fff;
   font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
 .small-nav-image{
@@ -158,11 +159,20 @@ section .logo img {
   }
 
   .nav-links {
-    width: 10rem;
+    width: 15rem;
     position: absolute;
-    left: -160px;
+    left: -245px;
+    height: 100vh;
     transition: all 0.5s;
   }
+
+  .nav-item {
+  margin: 1.5rem 0;
+}
+
+.nav-item a{
+  padding: 1rem;
+}
 
   .showbar{
     left: 0;
@@ -291,7 +301,7 @@ body .main-content {
 }
 .footer-left {
   width: 20%;
-  border: 3px solid gold;
+  /* border: 3px solid gold; */
 }
 
 
@@ -327,7 +337,7 @@ body .main-content {
   margin-left: 0.5rem;
   display: flex;
   justify-content: space-between;
-  border: 3px solid green;
+  /* border: 3px solid green; */
 }
 
 @media (max-width:420px) {
@@ -347,7 +357,7 @@ body .main-content {
 }
 
 .footer-right {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 20%;
 }
 .footer-right p {
