@@ -14,7 +14,7 @@ function Navbar() {
         <div className="navbar" id="navbar">
           <div className="navbar-control">
             <div className="small-nav-image">
-              <Link to={'/'}>
+              <Link to={"/"}>
                 <img src={Logo} alt="" />
               </Link>
             </div>
@@ -79,6 +79,14 @@ function Navbar() {
           </div>
           <div className="navbar-control">
             {/* <input type="checkbox" className="checkbox" id="checkbox" /> */}
+
+            <span className="my-acc" id="myAccount">
+              <Link to={"profile/account-info"}>
+                My Account <FaChevronDown />
+              </Link>
+
+            </span>
+
             <label
               htmlFor="togglenav"
               className="navbar-toggle"
