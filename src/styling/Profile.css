@@ -128,3 +128,14 @@
   margin: 1.5rem 0;
 }
 
+/* ORDER HISTORY SECTION  */
+
+.order-nav a{
+  background-color: transparent;
+  color: #dc5d18;
+}
+
+.order-nav a:hover{
+  background-color: #dc5d18;
+  color: #fff;
+}

@@ -51,6 +51,8 @@ import Faq from "./pages/Faq";
 
 import { AddAddress } from "./pages/profile/DeliveryAddress";
 import AnAddress from "./pages/profile/AnAddress";
+import OpenOrders from "./pages/profile/OpenOrders";
+import CloseOrders from "./pages/profile/CloseOrders";
 
 function App() {
   const router = createBrowserRouter(
@@ -77,7 +79,10 @@ function App() {
             <Route index element={<AnAddress />}/>
             <Route path="add-delivery-address" element={<AddAddress />} />
           </Route>
-          <Route path="order-history" element={<OrderHistory />} />
+          <Route path="order-history" element={<OrderHistory />}>
+            <Route index path="open-orders" element={<OpenOrders />} />
+            <Route path="close-orders" element={<CloseOrders />} />
+          </Route>
           <Route path="saved-items" element={<SavedItems />} />
           <Route path="recently-viewed" element={<RecentlyViewed />} />
           <Route path="inbox" element={<Inbox />} />
