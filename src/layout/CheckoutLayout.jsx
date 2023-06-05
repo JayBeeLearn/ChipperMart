@@ -24,7 +24,7 @@ function CheckoutLayout() {
         <div className="user-details">
           <div className="delivery-details">
             <div className="details-title">
-              <div>
+              <div className="details-heading">
                 <input type="radio" checked /> <h4> 1. DELIVERY DETAILS</h4>
               </div>
               <Link>
