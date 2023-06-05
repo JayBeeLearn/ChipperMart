@@ -1,44 +1,130 @@
+.profile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
 
+.profile-navigation {
+  width: 25%;
+  background-color: #fff;
+  /* padding: 10px 32px; */
+  border-radius: 5px;
+  height: fit-content;
+}
 
-.profile{
+.profile-navigation li {
+  list-style-type: none;
+  margin: 1rem 0;
+  /* padding: 10px 0; */
+  font-weight: bold;
+}
+
+.profile-navigation li:first-child {
+  margin-top: 0;
+}
+
+.profile-navigation li a {
+  padding: 10px;
+  color: #0f1660;
+  /* margin: .5rem; */
+}
+
+.profile-navigation .active {
+  display: block;
+  width: 100%;
+  background-color: #0f1660;
+  color: #fff;
+}
+
+.profile-content {
+  width: 73%;
+  background-color: #fff;
+  padding: 10px 32px;
+  border-radius: 5px;
+}
+
+/* ACCOUNT INFORMATION SECTION  */
+
+.account-info .form-group {
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
+
+.account-info .form-group input {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.account-info .account-btn {
+  width: 100%;
+  background-color: #dc5d18;
+  color: #fff;
+}
+
+/* DELIVERY ADDRESS SECTION  */
+
+.address-top{
     display: flex;
-    width: 100%;
     justify-content: space-between;
-}
-
-.profile-navigation{
-    width: 30%;
-    background-color: #fff;
-    /* padding: 10px 32px; */
-    border-radius: 5px;
-}
-
-.profile-navigation li{
-    list-style-type: none;
     margin: 1rem 0;
-    /* padding: 10px 0; */
-    font-weight: bold;
 }
 
-.profile-navigation li:first-child{
-    margin-top: 0;
-}
-
-.profile-navigation li a{
-    padding: 10px;
-    /* margin: .5rem; */
-}
-
-.profile-navigation .active{
-    display: block;
-    width: 100%;
-    background-color: #0f1660;
+.address-top .add-btn a{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #dc5d18;
     color: #fff;
 }
 
-.profile-content{
-    width: 68%;
-    background-color: #fff;
-    padding: 10px 32px;
-    border-radius: 5px;
+.user-address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
+
+.each-address {
+  border: 1px solid rgb(178, 178, 178);
+  /* padding: 1rem; */
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+.each-address p {
+  margin: 0.5rem 1rem;
+  font-size: .7rem;
+}
+
+.each-address .control-btns {
+  display: flex;
+  justify-content: end;
+}
+
+.each-address .control-btns button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.each-address .control-btns button:hover{
+    /* background-color: #dc5d18; */
+    color: #dc5d18;
+    /* padding: 5px; */
+}
+
+
+/* ADD DELIVERY ADDRESS SECTION  */
+
+.form-section .name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name .form-group{
+  width: 48%;
+  margin: .5rem 0;
+}
+
+.form-group{
+  margin: 1.5rem 0;
+}
+

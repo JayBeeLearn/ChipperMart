@@ -290,6 +290,7 @@ body .main-content {
   margin-bottom: 0.8rem;
 }
 
+
 .footer p {
   font-size: 0.8rem;
   margin: 0.5rem 0;
@@ -297,6 +298,10 @@ body .main-content {
 
 .footer li {
   font-size: 0.8rem;
+}
+
+.footer li a{
+  color: #fff;
 }
 
 

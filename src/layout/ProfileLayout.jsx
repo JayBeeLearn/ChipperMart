@@ -7,7 +7,9 @@ import { FaBicycle, FaEye, FaHeart, FaHistory, FaMailBulk, FaSignOutAlt, FaUser 
 function ProfileLayout() {
   return (
     <>
-      <h2>My Profile</h2>
+      <div className="page-title">
+        <h2>My Profile</h2>
+      </div>
 
       <section className="profile">
         <div className="profile-navigation">
@@ -30,10 +32,7 @@ function ProfileLayout() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"saved-items"}>
-              {" "}
-              {<FaHeart />} Saved Items{" "}
-            </NavLink>
+            <NavLink to={"saved-items"}> {<FaHeart />} Saved Items </NavLink>
           </li>
           <li>
             <NavLink to={"recently-viewed"}>
@@ -45,10 +44,7 @@ function ProfileLayout() {
             <NavLink to={"inbox"}> {<FaMailBulk />} Inbox </NavLink>
           </li>
           <li>
-            <NavLink to={"logout"}>
-              {" "}
-              {<FaSignOutAlt />} Logout{" "}
-            </NavLink>
+            <NavLink to={"logout"}> {<FaSignOutAlt />} Logout </NavLink>
           </li>
         </div>
 
