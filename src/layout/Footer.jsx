@@ -105,7 +105,6 @@ function Footer() {
 
               <div className="box">
                 <div className="input-box">
-                  <i className="fas fa-envelope"></i>
                   <input type="text" placeholder="Enter your email" />
                   <span id="suscribe">Suscribe</span>
                 </div>

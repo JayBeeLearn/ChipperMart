@@ -16,12 +16,11 @@ function Food({}) {
   // console.log(products);
   
   const filterProduct = products
-  .filter((product) => product.category == "food")
-  .slice(0, 3);
+  .filter((product) => product.category == "food");
   
   const categoryItems = ["all", ...new Set(filterProduct.map((item) => item.subcategory))];
   
-  console.log(categoryItems);
+  console.log(filterProduct);
 
   return (
     <div>

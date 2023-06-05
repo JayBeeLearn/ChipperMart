@@ -16,8 +16,7 @@ function Babies() {
   const [products, setProducts] = useState(data);
 
   const filterProduct = products
-    .filter((product) => product.category == "babies")
-    .slice(0, 3);
+    .filter((product) => product.category == "babies");
   return (
     <div>
       <h1>Babies {<FaBaby />} </h1>

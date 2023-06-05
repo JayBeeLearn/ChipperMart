@@ -15,8 +15,7 @@ function Vegetables() {
   const [products, setProducts] = useState(data);
 
   const filterProduct = products
-    .filter((product) => product.category == "vegetables")
-    .slice(0, 3);
+    .filter((product) => product.category == "vegetables");
   return (
     <div>
       <h1>Vegetables {<FaLeaf />}</h1>

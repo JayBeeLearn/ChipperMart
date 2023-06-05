@@ -82,6 +82,8 @@ function App() {
           <Route path="order-history" element={<OrderHistory />}>
             <Route index path="open-orders" element={<OpenOrders />} />
             <Route path="close-orders" element={<CloseOrders />} />
+
+            <Route path="order-details" element={<OrderHistory />}/>
           </Route>
           <Route path="saved-items" element={<SavedItems />} />
           <Route path="recently-viewed" element={<RecentlyViewed />} />

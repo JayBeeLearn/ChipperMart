@@ -16,7 +16,9 @@ import "../styling/Homepage.css";
 function Homepage() {
   const [products, setProducts] = useState(data);
 
-  const filterProduct = products.filter((product) => product.id).slice(0, 4);
+  const filterProduct = products.filter((product) => product.id).slice(0, 8);
+
+  console.log(filterProduct);
 
   return (
     <div className="homepage">
@@ -46,7 +48,7 @@ function Homepage() {
         <h3>Hot Deal </h3>
       </div>
       <Content filterProduct={filterProduct} />
-      <Content filterProduct={filterProduct} />
+      {/* <Content filterProduct={filterProduct} /> */}
     </div>
   );
 }

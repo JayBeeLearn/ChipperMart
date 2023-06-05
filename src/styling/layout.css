@@ -54,6 +54,7 @@ section .logo img {
   border: none;
   font-style: 1rem;
   outline: none;
+  background-color: transparent;
 }
 
 .searchbox #searchBtn {
@@ -201,6 +202,7 @@ body .main-content {
   padding: 3rem 0 1rem 0;
   color: var(--white);
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-left {
@@ -260,13 +262,15 @@ body .main-content {
   margin-top: 1rem;
   border: 1px solid white;
   border-radius: 15px;
-  padding: 5px 0;
+  /* padding: 5px 0; */
   padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-box input {
   width: 7.7rem;
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   border: none;
   background-color: transparent;
 }

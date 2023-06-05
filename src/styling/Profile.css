@@ -132,10 +132,55 @@
 
 .order-nav a{
   background-color: transparent;
+  color: #999;
+  margin: 0 .5rem ;
+}
+
+.order-nav .active{
   color: #dc5d18;
+  border-bottom: 1px solid #dc5d18;
 }
 
 .order-nav a:hover{
   background-color: #dc5d18;
   color: #fff;
+}
+
+.order-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #999;
+  border-radius: 7px;
+}
+
+.order-item .image{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-item .image img{
+  width: 100%;
+  align-self: center;
+}
+
+.order-item .info{
+  width: 60%;
+  margin: 0rem 1rem;
+}
+
+
+.order-item .see-details{
+  width: 20%;
+ 
+}
+
+.order-item .see-details a{
+   border: 1px solid #dc5d18;
+  padding: 5px 10px;
+  border-radius: 7px;
 }

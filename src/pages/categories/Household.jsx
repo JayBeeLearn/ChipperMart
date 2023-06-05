@@ -13,8 +13,7 @@ function Household() {
   const [products, setProducts] = useState(data);
 
   const filterProduct = products
-    .filter((product) => product.category == "household")
-    .slice(0, 3);
+    .filter((product) => product.category == "household");
 
   // console.log(filterProduct);
   return (

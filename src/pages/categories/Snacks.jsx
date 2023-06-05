@@ -14,8 +14,7 @@ function Snacks() {
   const [products, setProducts] = useState(data);
 
   const filterProduct = products
-    .filter((product) => product.category == "snacks")
-    .slice(0, 3);
+    .filter((product) => product.category == "snacks");
   return (
     <div>
       <h1>Snacks {<FaCookieBite />}</h1>

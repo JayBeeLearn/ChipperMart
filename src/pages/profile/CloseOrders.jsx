@@ -6,4 +6,4 @@ function CloseOrders() {
   )
 }
 
-export default CloseOrders
+export default CloseOrders      

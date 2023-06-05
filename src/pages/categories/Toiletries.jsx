@@ -14,8 +14,7 @@ function Toiletries() {
   const [products, setProducts] = useState(data);
 
   const filterProduct = products
-    .filter((product) => product.category == "toiletries")
-    .slice(0, 3);
+    .filter((product) => product.category == "toiletries");
   return (
     <div>
       <h1>Toiletries {<FaToilet />}</h1>

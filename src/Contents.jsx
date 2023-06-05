@@ -16,7 +16,7 @@ function Content({test, filterProduct, categoryItems}) {
    ];
   //  console.log(allCategories);
 //  console.log(filterProduct);
-  const newProduct = filterProduct.slice(0, 4)
+  const newProduct = filterProduct
   // console.log(newProduct)
   return (
     <div>
