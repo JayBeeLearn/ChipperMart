@@ -60,6 +60,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Homepage />} />
         <Route path="categories" element={<CategoriesLayout />}>
+          <Route index element={<Food />}/>
           <Route index path="food" element={<Food />} />
           <Route path="babies" element={<Babies />} />
           <Route path="cleaning" element={<Cleaning />} />

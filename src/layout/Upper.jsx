@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 function Upper() {
   return (
-    <div>
       <section className="hero">
         <section id="top" className="top">
           <div className="logo">
@@ -40,7 +39,6 @@ function Upper() {
           </div>
         </section>
       </section>
-    </div>
   );
 }
 

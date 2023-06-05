@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CartItem({ id, name, category, subcategory, price, discount, image }) {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(100);
   return (
     <>
       <div className="cart-item">

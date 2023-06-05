@@ -42,7 +42,6 @@ function CheckoutLayout() {
             <div className="extra-details">
               <input
                 type="checkbox"
-                value={checked}
                 className="checkbox"
                 id="checkbox"
               />{" "}

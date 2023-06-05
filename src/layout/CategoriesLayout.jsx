@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "../styling/Category.css";
 import { Outlet } from "react-router-dom";
@@ -16,10 +16,10 @@ function CategoriesLayout() {
           <nav>
             <ul>
               <li>
-                <NavLink to={"/categories/food"}>Food</NavLink>
+                <Link to={"/categories/food"}>Food</Link>
               </li>
               <li>
-                <NavLink to={"/categories/vegetables"}>Vegetable</NavLink>
+                <Link to={"/categories/vegetables"}>Vegetable</Link>
               </li>
               <li>
                 <NavLink to={"/categories/household"}>Household</NavLink>

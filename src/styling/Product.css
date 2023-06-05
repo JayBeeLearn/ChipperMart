@@ -13,6 +13,14 @@
   border-radius: 5px;
 }
 
+@media (max-width:420px) {
+  .product-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .view-images {
   width: 50%;
   /* border: 2px solid salmon; */
@@ -139,3 +147,26 @@
 }
 
 
+@media (max-width:420px) {
+  .view-images, .view-details{
+    width: 100%;
+  }
+
+  .price p, button{
+    font-size: .8rem;
+  }
+
+  .discount-price{
+    font-size: 1.1rem;
+  }
+
+  .additional-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .additional-info .col{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

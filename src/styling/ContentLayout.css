@@ -19,6 +19,13 @@
   padding: 1rem 4rem;
 }
 
+@media (max-width:420px) {
+  .content{
+    padding: 1rem;
+    margin-top: .5rem;
+  }
+}
+
 .content h1,
 h2,
 h3,
@@ -68,3 +75,20 @@ h6 {
   height: 100%;
 }
 
+@media (max-width: 420px) {
+  .section{
+    height: 6rem;
+  }
+}
+
+.hotdeal {
+  font-size: 2rem;
+  background-color: #0f1660;
+  width: 10rem;
+  position: absolute;
+  left: 0;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
