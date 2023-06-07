@@ -2,7 +2,6 @@ import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import Logo from "../images/logo-white.png";
 
-
 import "../styling/layout.css";
 
 import { Link, NavLink } from "react-router-dom";
@@ -22,7 +21,7 @@ function Navbar() {
           <div id="navContent" className="nav-contents">
             <ul className="nav-links" id="navlinks">
               <li className="nav-item all-category">
-                <button
+                <Link
                   className="all_category"
                   id="allcategory"
                   onClick={() => {
@@ -32,7 +31,7 @@ function Navbar() {
                   }}
                 >
                   All Categories <FaBars />
-                </button>
+                </Link>
               </li>
 
               <li className="nav-item">
@@ -84,7 +83,6 @@ function Navbar() {
               <Link to={"profile/account-info"}>
                 My Account <FaChevronDown />
               </Link>
-
             </span>
 
             <label
