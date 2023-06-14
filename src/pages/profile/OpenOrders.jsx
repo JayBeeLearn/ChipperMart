@@ -7,6 +7,9 @@ import { NavLink } from "react-router-dom";
 function OpenOrders() {
   const [productOrders, setProductOrders] = useState(orders);
 
+  const openOrders = productOrders.filter((item) => {
+    return item.status
+  })
   // console.log(productOrders);
   return (
     <>
@@ -20,7 +23,7 @@ function OpenOrders() {
           Close Orders
         </NavLink>
       </div>
-      {productOrders.map((order) => {
+      {openOrders.map((order) => {
         return <OrderItem key={order.id} {...order} />;
       })}
     </>

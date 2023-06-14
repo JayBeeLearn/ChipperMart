@@ -17,6 +17,7 @@ const orders = [
     image: Spaghetti,
     quantity: 2,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -28,6 +29,7 @@ const orders = [
     image: Malt,
     quantity: 4,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -39,6 +41,7 @@ const orders = [
     image: Carrot,
     quantity: 3,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -50,6 +53,7 @@ const orders = [
     image: OkroSoup,
     quantity: 1,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -61,6 +65,7 @@ const orders = [
     image: BeansPorridge,
     quantity: 2,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -72,6 +77,7 @@ const orders = [
     image: AfangSoup,
     quantity: 3,
     delivery_fee: 1220,
+    status: true,
   },
 
   {
@@ -83,6 +89,59 @@ const orders = [
     image: FufuSoup,
     quantity: 4,
     delivery_fee: 1220,
+    status: true,
+  },
+
+  {
+    id: 8,
+    total: 2500,
+    order_no: 7485,
+    payment_method: "Payment on collection",
+    date: "25th May 2023",
+    image: AfangSoup,
+    quantity: 4,
+    delivery_fee: 1220,
+    status: false,
+    cancelled: "BOT Suspected",
+  },
+
+  {
+    id: 9,
+    total: 2500,
+    order_no: 268,
+    payment_method: "Payment on collection",
+    date: "25th May 2023",
+    image: Spaghetti,
+    quantity: 4,
+    delivery_fee: 1220,
+    status: false,
+    cancelled: "Payment Unsuccessful",
+  },
+
+  {
+    id: 10,
+    total: 2500,
+    order_no: 8744,
+    payment_method: "Payment on collection",
+    date: "25th May 2023",
+    image: OkroSoup,
+    quantity: 4,
+    delivery_fee: 1220,
+    status: false,
+    cancelled: "User Cancelled",
+  },
+
+  {
+    id: 11,
+    total: 2500,
+    order_no: 4841,
+    payment_method: "Payment on collection",
+    date: "25th May 2023",
+    image: Malt,
+    quantity: 4,
+    delivery_fee: 1220,
+    status: false,
+    cancelled: " Card Declined",
   },
 ];
 
