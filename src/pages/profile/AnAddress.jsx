@@ -22,7 +22,7 @@ function AnAddress() {
         </div>
         <hr />
         <div className="user-address">
-          {userAddress.map((address) => {
+          {userAddress.slice(0, 4).map((address) => {
             return <EachAddress key={address.id} {...address} />;
           })}
         </div>

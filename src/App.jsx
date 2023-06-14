@@ -53,6 +53,7 @@ import { AddAddress } from "./pages/profile/DeliveryAddress";
 import AnAddress from "./pages/profile/AnAddress";
 import OpenOrders from "./pages/profile/OpenOrders";
 import CloseOrders from "./pages/profile/CloseOrders";
+import OrderDetails from "./pages/profile/OrderDetails";
 
 function App() {
   const router = createBrowserRouter(
@@ -81,10 +82,10 @@ function App() {
             <Route path="add-delivery-address" element={<AddAddress />} />
           </Route>
           <Route path="order-history" element={<OrderHistory />}>
-            <Route index path="open-orders" element={<OpenOrders />} />
+            <Route index  element={<OpenOrders />} />
             <Route path="close-orders" element={<CloseOrders />} />
 
-            <Route path="order-details" element={<OrderHistory />}/>
+            <Route path="order-details/:order_id" element={<OrderDetails />}/>
           </Route>
           <Route path="saved-items" element={<SavedItems />} />
           <Route path="recently-viewed" element={<RecentlyViewed />} />

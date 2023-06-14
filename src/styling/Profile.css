@@ -184,3 +184,116 @@
   padding: 5px 10px;
   border-radius: 7px;
 }
+
+
+/* ORDER DETAILS PAGE  */
+
+.order-details-top{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* float: left; */
+}
+
+.order-details-top h2{
+  margin: 0 1rem;
+}
+
+.item-ordered, .order-information, .payment-information, .delivery-information{
+  border: 1px solid #999;
+  border-radius: 5px;
+  /* padding: 1rem; */
+  margin: 1rem 0;
+}
+
+.IO-top{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  margin: 1rem 0;
+}
+
+.IO-top p, h6{
+  margin: 0 1rem;
+}
+
+.order-status{
+  color: green;
+}
+
+.detail-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  /* border: 1px solid #999; */
+  border-radius: 7px;
+}
+
+.detail-item .image{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-item .image img{
+  width: 100%;
+  align-self: center;
+}
+
+.detail-item .info{
+  width: 40%;
+  margin: 0rem 1rem;
+}
+
+.item-ordered .order-buttons{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-track{
+  background-color: #dc5d18;
+  color: #fff;
+
+}
+
+.btn-track:hover{
+  background-color: transparent;
+  color: #dc5d18;
+}
+
+.btn-cancel:hover{
+  background-color: #dc5d18;
+  color: #fff;
+}
+.order-information{
+  width: 100%;
+}
+.order-info{
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.order-info p{
+  /* width  : 100%; */
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.order-detail-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.payment-information{
+  width: 49%;
+}
+
+.pay-details{
+  width: 50%;
+}
+.delivery-information{
+  width: 49%;
+}

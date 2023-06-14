@@ -26,6 +26,27 @@ const address = [
     location: "No 600 Oron Road, Peace Plaza, Uyo, Akwa Ibom State",
     contact: "08125466984",
   },
+
+  {
+    id: 5,
+    user: "David Milton",
+    location: "No 600 Oron Road, Peace Plaza, Uyo, Akwa Ibom State",
+    contact: "08125466984",
+  },
+
+  {
+    id: 6,
+    user: "Micah Self",
+    location: "No 600 Oron Road, Peace Plaza, Uyo, Akwa Ibom State",
+    contact: "08125466984",
+  },
+
+  {
+    id: 7,
+    user: "Anthony !Joshua",
+    location: "No 600 Oron Road, Peace Plaza, Uyo, Akwa Ibom State",
+    contact: "08125466984",
+  },
 ];
 
 export default address

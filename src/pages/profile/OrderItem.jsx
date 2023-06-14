@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-function OrderItem({image, id, order_no, payment_method, total, date}) {
+function OrderItem({ image, id, order_no, payment_method, total, date }) {
+  
+  
+  // console.log(order_id);
   return (
     <>
       <div className="order-item">
@@ -23,7 +26,7 @@ function OrderItem({image, id, order_no, payment_method, total, date}) {
           </p>
         </div>
         <div className="see-details">
-          <Link to={'/profile/order-history/order-details'} > See Details</Link>
+          <Link to={`/profile/order-history/order-details/${id}`} key={id} > See Details</Link>
         </div>
       </div>
     </>
