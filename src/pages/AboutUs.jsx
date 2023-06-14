@@ -47,7 +47,7 @@ function AboutUs() {
           </div>
 
           <div className="mission">
-            <h2 className="text-left">Our Missio</h2>
+            <h2 className="text-left">Our Mission</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex saepe
               quidem voluptatem, omnis facilis voluptatibus id architecto,

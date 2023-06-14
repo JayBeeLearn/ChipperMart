@@ -6,7 +6,7 @@
 }
 
 .profile-navigation {
-  width: 25%;
+  width: 20%;
   background-color: #fff;
   /* padding: 10px 32px; */
   border-radius: 5px;
@@ -38,7 +38,7 @@
 }
 
 .profile-content {
-  width: 73%;
+  width: 78%;
   background-color: #fff;
   padding: 10px 32px;
   border-radius: 5px;
@@ -296,4 +296,31 @@
 }
 .delivery-information{
   width: 49%;
+}
+
+
+/* SAVED ITEMS  */
+
+
+
+/* INBOX SECTION  */
+
+.message{
+  border: 1px solid #999;
+  border-radius: 7px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.message-info{
+  width: 77%;
+  margin: 0 1rem;
+}
+
+.message-title{
+  margin: 0;
 }

@@ -46,6 +46,7 @@ const data = [
     price: "4500",
     discount: "5000",
     image: Spaghetti,
+    wishlist: true,
   },
   {
     id: 2,
@@ -55,6 +56,7 @@ const data = [
     price: "2000",
     discount: "2650",
     image: Carrot,
+    wishlist: true,
   },
   {
     id: 3,
@@ -64,6 +66,7 @@ const data = [
     price: "1800",
     discount: "2300",
     image: Malt,
+    wishlist: true,
   },
   {
     id: 4,
@@ -73,6 +76,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: OkroSoup,
+    wishlist: true,
   },
   {
     id: 5,
@@ -82,6 +86,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: BeansPorridge,
+    wishlist: true,
   },
 
   {
@@ -92,6 +97,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: AfangSoup,
+    wishlist: true,
   },
   {
     id: 7,
@@ -101,6 +107,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: FufuSoup,
+    wishlist: true,
   },
 
   {
@@ -111,6 +118,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: Lettuce,
+    wishlist: true,
   },
 
   {
@@ -121,6 +129,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: pepper,
+    wishlist: true,
   },
 
   {
@@ -131,6 +140,7 @@ const data = [
     price: "1750",
     discount: "2000",
     image: onions,
+    wishlist: true,
   },
 
   {

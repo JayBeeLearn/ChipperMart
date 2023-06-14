@@ -68,7 +68,9 @@ function Product() {
               <h3 className="product-name">{displayProduct[0].name}</h3>
 
               <div className="wishlist">
-                <FaRegHeart />
+                <button className="nb-btn btn-wishlist">
+                  <FaRegHeart />
+                </button>
               </div>
             </div>
             <div className="product-code">

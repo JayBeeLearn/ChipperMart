@@ -127,3 +127,7 @@ button:focus-visible {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+.btn-wishlist{
+  background-color: transparent;
+}

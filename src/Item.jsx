@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styling/ContentLayout.css";
 import AddToCart from "./components/AddToCart";
 import { Link } from "react-router-dom";
@@ -17,13 +17,21 @@ function Item({
   discount,
   image,
   newProduct,
+  wishlist,
 }) {
   // console.log(newProduct)
+  const [wishList, setWishList] =useState(wishlist)
 
+  // console.log(wishList);
+  // console.log(wishlist);
   return (
     <>
       <div className="col item-1">
-        <div className="wishlist">{<FaRegHeart />}</div>
+        <div className="wishlist">
+          <button className="nb-btn btn-wishlist" onClick={() => {
+            setWishList(!wishlist)
+          }}>{<FaRegHeart />}</button>
+        </div>
         {/* <Link to={id} key={id}> */}
         <Link to={`/product/${id.toString()}`} key={id}>
           <div className="image">
