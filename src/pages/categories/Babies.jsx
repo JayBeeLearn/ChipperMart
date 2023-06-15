@@ -18,11 +18,10 @@ function Babies() {
   const filterProduct = products
     .filter((product) => product.category == "babies");
   return (
-    <div>
+    <>
       <h1>Babies {<FaBaby />} </h1>
       <Content filterProduct={filterProduct} />
-      <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 

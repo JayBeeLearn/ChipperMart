@@ -195,7 +195,14 @@ section .logo img {
   }
 
   .nav-links {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    justify-content: flex-start;
+  }
+
+  .nav-item{
+    align-items: start;
   }
 
   .nav-links li:first-child {

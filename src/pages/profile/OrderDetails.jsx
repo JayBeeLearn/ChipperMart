@@ -78,7 +78,7 @@ function OrderDetails() {
                 Cancel Order
               </Link>
 
-              <Link className="btn btn-track" key={id}>
+              <Link className="btn btn-track" to={`../track-order/${id}`} key={id}>
                 {" "}
                 Track Order
               </Link>

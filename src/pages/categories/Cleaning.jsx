@@ -17,11 +17,11 @@ function Cleaning() {
   const filterProduct = products
     .filter((product) => product.category == "toiletries");
   return (
-    <div>
+    <>
       <h1>Cleaning {<FaHandsWash />} </h1>
 
       <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 

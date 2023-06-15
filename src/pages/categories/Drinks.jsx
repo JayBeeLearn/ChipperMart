@@ -14,10 +14,10 @@ function Drinks() {
   const filterProduct = products
     .filter((product) => product.category == "drinks");
   return (
-    <div>
+    <>
       <h1>Drinks {<FaBeer />} </h1>
       <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 

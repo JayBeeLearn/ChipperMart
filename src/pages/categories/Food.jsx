@@ -23,12 +23,12 @@ function Food({}) {
   console.log(filterProduct);
 
   return (
-    <div>
+    <>
       <h1>
         Food Page <FaApple />
       </h1>
       <Content filterProduct={filterProduct}  />
-    </div>
+    </>
   );
 }
 

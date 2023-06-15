@@ -16,10 +16,10 @@ function Snacks() {
   const filterProduct = products
     .filter((product) => product.category == "snacks");
   return (
-    <div>
+    <>
       <h1>Snacks {<FaCookieBite />}</h1>
       <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 

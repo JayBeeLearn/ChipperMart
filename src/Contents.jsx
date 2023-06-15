@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./content.css";
 
 import data from "./assets/Data";
@@ -9,7 +9,8 @@ import Item from "./Item";
 
 // console.log(allCategories);
 
-function Content({test, filterProduct, categoryItems}) {
+function Content({test, filterProduct, categoryItems}) 
+{
   const [products, setProducts] = useState(data);
 
     categoryItems = ["all",...new Set(filterProduct.map((item) => item.subcategory)),
@@ -18,10 +19,19 @@ function Content({test, filterProduct, categoryItems}) {
 //  console.log(filterProduct);
   const newProduct = filterProduct
   // console.log(newProduct)
-  return (
-    <div>
 
-      <div className="row">
+
+  const rowRef = useRef(null)
+
+  useEffect(() => {
+    const rowWidth = rowRef.current.getBoundingClientRect()
+
+    console.log(rowWidth);
+  }, [])
+  return (
+ 
+
+      <div className="row" ref={rowRef}>
         {/* First Item  */}
 
 
@@ -38,7 +48,6 @@ function Content({test, filterProduct, categoryItems}) {
           );
         })}
       </div>
-    </div>
   );
 }
 

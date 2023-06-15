@@ -17,11 +17,11 @@ function Vegetables() {
   const filterProduct = products
     .filter((product) => product.category == "vegetables");
   return (
-    <div>
+    <>
       <h1>Vegetables {<FaLeaf />}</h1>
 
       <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 

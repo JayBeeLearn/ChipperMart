@@ -17,10 +17,10 @@ function Household() {
 
   // console.log(filterProduct);
   return (
-    <div>
+    <>
       <h1>Household {<FaTable />}</h1>
       <Content filterProduct={filterProduct} />
-    </div>
+    </>
   );
 }
 
