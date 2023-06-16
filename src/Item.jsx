@@ -26,18 +26,19 @@ function Item({
   // console.log(wishlist);
   return (
     <>
-      <div className="col item-1">
+      <div className="col item">
         <div className="wishlist">
           <button className="nb-btn btn-wishlist" onClick={() => {
             setWishList(!wishlist)
           }}>{<FaRegHeart />}</button>
         </div>
         {/* <Link to={id} key={id}> */}
-        <Link to={`/product/${id.toString()}`} key={id}>
-          <div className="image">
+       
+        <div className="image">
+           <Link to={`/product/${id.toString()}`} key={id}>
             <img src={image} alt={name} />
-          </div>
         </Link>
+          </div>
         <div className="info">
           <h6 className="productName">{name} </h6>
           <h5 className="price">

@@ -44,6 +44,16 @@
   border-radius: 5px;
 }
 
+@media (max-width:420px) {
+
+  .profile{
+    flex-direction: column;
+  }
+  .profile-navigation{
+    display: inline;
+  }
+}
+
 /* ACCOUNT INFORMATION SECTION  */
 
 .account-info .form-group {
@@ -96,7 +106,7 @@
 
 .each-address .control-btns {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .each-address .control-btns button {
