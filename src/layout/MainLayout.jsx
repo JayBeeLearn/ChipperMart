@@ -16,7 +16,7 @@ function MainLayout() {
         <NavBar />
       </div>
       <div className="content">
-        {/* <Outlet /> */}
+        <Outlet />
       </div>
       <div className="bottom">
         <Footer />

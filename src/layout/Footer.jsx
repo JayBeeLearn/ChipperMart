@@ -29,7 +29,7 @@ function Footer() {
         </div>
 
         <div className="bg-primary_blue  //bottom-footer text-white">
-          <div className="flex flex-col-reverse px-6 sm:flex py-4  //footer-content">
+          <div className="flex flex-col-reverse px-6 sm:flex sm:flex-row py-4  //footer-content">
             <div className="w-[100%] sm:w-[20%] mx-0 sm:mr-4 xs:my-8 sm:my-0 //footer-left ">
               <div className="w-[50%] sm:w-[90%] //image">
                 <img src={LogoWhite} alt="" className="w-[100%]" />
