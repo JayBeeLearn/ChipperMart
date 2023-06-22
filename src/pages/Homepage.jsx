@@ -18,7 +18,7 @@ function Homepage() {
 
   const filterProduct = products.filter((product) => product.id).slice(0, 8);
 
-  console.log(filterProduct);
+  // console.log(filterProduct);
 
   return (
     <div className="homepage">

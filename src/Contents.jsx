@@ -26,7 +26,7 @@ function Content({test, filterProduct, categoryItems})
   useEffect(() => {
     const rowWidth = rowRef.current.getBoundingClientRect()
 
-    console.log(rowWidth);
+    // console.log(rowWidth);
   }, [])
   return (
  

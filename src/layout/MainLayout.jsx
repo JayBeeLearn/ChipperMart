@@ -10,13 +10,13 @@ import { Outlet } from "react-router-dom";
 
 function MainLayout() {
   return (
-    <div className="container">
+    <div className="w-[100%]">
       <div className="top">
         <Upper />
         <NavBar />
       </div>
       <div className="content">
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
       <div className="bottom">
         <Footer />

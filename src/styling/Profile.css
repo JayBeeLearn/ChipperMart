@@ -50,7 +50,22 @@
     flex-direction: column;
   }
   .profile-navigation{
+    width: 100%;
     display: inline;
+  }
+
+  .profile-navigation li{
+    display: inline;
+  }
+
+  .profile-navigation .active{
+    display: inline;
+    /* width: fit-content; */
+  }
+
+  .profile-content{
+    width: 100%;
+    margin-top: 1rem;
   }
 }
 
@@ -193,6 +208,10 @@
    border: 1px solid #dc5d18;
   padding: 5px 10px;
   border-radius: 7px;
+}
+
+.category-content .row .col{
+  margin: 5rem 0;
 }
 
 

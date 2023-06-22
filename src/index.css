@@ -1,6 +1,10 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
+
+.div_padding {
+  @apply ss:px-8 xs:px-4 sm:px-12 md:px-14 lg:px-20;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,7 +21,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 
 a {
   font-weight: 500;
@@ -73,46 +76,45 @@ button:focus-visible {
  
 } */
 
-.text-left{
+.text-left {
   text-align: left;
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-
-@media (max-width:420px) {
-  h1{
+@media (max-width: 420px) {
+  h1 {
     font-size: 2rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.7rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.5rem;
   }
 
-  h4{
+  h4 {
     font-size: 1.3rem;
   }
 
-  h5{
+  h5 {
     font-size: 1rem;
   }
 
-  h6{
-    font-size: .9rem;
+  h6 {
+    font-size: 0.9rem;
   }
 }
 
-.btn{
+.btn {
   border-radius: 8px;
   border: 1px solid #999;
   padding: 0.3em 0.6em;
@@ -124,7 +126,7 @@ button:focus-visible {
   transition: border-color 0.25s;
 }
 
-.nb-btn{
+.nb-btn {
   border-radius: 8px;
   padding: 0.3em 0.6em;
   font-size: 1em;
@@ -134,6 +136,6 @@ button:focus-visible {
   transition: border-color 0.25s;
 }
 
-.btn-wishlist{
+.btn-wishlist {
   background-color: transparent;
 }
