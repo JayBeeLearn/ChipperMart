@@ -14,7 +14,7 @@ function SavedItems() {
   
   return (
     <>
-      <div className="saved-items">
+      <div className="bg-transparent saved-items">
         <div className="category-content">
           <div className="row">
             {wishList.map((product) => {

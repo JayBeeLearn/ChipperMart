@@ -4,18 +4,18 @@ function CartItem({ id, name, category, subcategory, price, discount, image }) {
   const [quantity, setQuantity] = useState(1);
   return (
     <>
-      <div className="cart-item">
-        <div className="cart-product-image">
-          <img src={image} alt="" />
+      <div className="flex justify-between items-center bg-white my-4 p-2 sm:p-4 rounded-md //cart-item">
+        <div className=" w-[12%] h-full flex justify-between items-center //cart-product-image">
+          <img src={image} alt="" className="w-full h-full object-contain" />
         </div>
-        <div className="cart-product-name">
-          <div className="name">
+        <div className="w-[35%] flex justify-between items-center cart-product-name">
+          <div className="text-center text-sm //name">
             <h3> {name}</h3>
             <small>In stock</small>
           </div>
-          <div className="qtn-btns">
+          <div className="text-sm flex  sm:qtn-btns">
             <button
-              className="qtn-btn"
+              className="py-[3px] px-[7px] qtn-btn"
               onClick={() => {
                 if (quantity <= 1) {
                   setQuantity(1);
@@ -26,9 +26,9 @@ function CartItem({ id, name, category, subcategory, price, discount, image }) {
             >
               -
             </button>
-            <span className="quantity">{quantity} </span>
+            <span className="py-[3px] px-[10px] quantity">{quantity} </span>
             <button
-              className="qtn-btn"
+              className="py-[3px] px-[7px] qtn-btn"
               onClick={() => {
                 setQuantity(quantity + 1);
               }}
@@ -38,15 +38,15 @@ function CartItem({ id, name, category, subcategory, price, discount, image }) {
           </div>
         </div>
 
-        <div className="cart-item-amount">
+        <div className="text-sm //cart-item-amount">
           <h4>{quantity * price}</h4>
           <p>
             N{price} x {quantity} {quantity > 1 ? "items" : "item"}
           </p>
         </div>
-        <div className="item-control-btns">
-          <button>Remove item</button>
-          <button>Save for later</button>
+        <div className="text-[12px] p-0 flex flex-col justify-end items-end  //item-control-btns">
+          <button className="bg-transparent p-0">Remove item</button>
+          <button className="bg-transparent p-0">Save for later</button>
         </div>
       </div>
     </>

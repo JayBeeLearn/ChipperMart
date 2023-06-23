@@ -13,10 +13,10 @@ function ProfileLayout() {
 
       <section className="profile">
         <div className="profile-navigation">
+          
           <li>
-            <NavLink to={"account-info"}>
-              {" "}
-              {<FaUser />} Account Information{" "}
+            <NavLink to={"account-info"} className="flex items-center ">
+              <span>{<FaUser />}</span> <span>Account Information</span>
             </NavLink>
           </li>
           <li>
@@ -48,7 +48,7 @@ function ProfileLayout() {
           </li>
         </div>
 
-        <div className="profile-content">
+        <div className="bg-transparent sm:w-[78%] py-[10px] px-[5px] //profile-content">
           <Outlet />
         </div>
       </section>

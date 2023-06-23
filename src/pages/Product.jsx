@@ -46,8 +46,8 @@ function Product() {
         <div className="page-title">
           <h2>{displayProduct[0].name}</h2>
         </div>
-        <div className="product-view">
-          <div className="view-images">
+        <div className="bg-white my-4 rounded-md flex justify-center items-center flex-col sm:flex sm:flex-row //product-view">
+          <div className="flex flex-col justify-center items-center sm:w-1/2 //view-images">
             <div className="main-image">
               <img src={displayProduct[0].image} alt="" />
             </div>

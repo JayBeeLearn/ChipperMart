@@ -2,10 +2,10 @@ import React from "react";
 
 function AccountInfo() {
   return (
-    <>
-      <h2 className="text-left">Account Information</h2>
+    < >
+      <h2 className="pro_sec_title ">Account Information</h2>
       <hr />
-      <section className="account-section">
+      <section className="pro_sec account-section">
         <div className="account-info">
           <form action="">
             <div className="form-group">

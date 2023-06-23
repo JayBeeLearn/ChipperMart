@@ -11,7 +11,7 @@ function CategoriesLayout() {
     <>
       <h2>Categories</h2>
       <div className="categories">
-        <div className="side">
+        <div className="hidden sm:block side">
           <h2 className="title">Category</h2>
           <nav>
             <ul>

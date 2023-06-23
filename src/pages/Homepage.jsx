@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
-import {  FaHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 import AdImage from "../images/adimage.jpg";
 import Easter from "../images/easter.png";
 import Exclusive from "../images/exclusive.png";
-
 
 import Content from "../Contents";
 import data from "../assets/Data";
 
 import "../styling/ContentLayout.css";
 import "../styling/Homepage.css";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   const [products, setProducts] = useState(data);
@@ -25,13 +25,13 @@ function Homepage() {
       <h1>
         Home Page <FaHome />
       </h1>
-      <div className="section">
-        <div className="advert">
+      <div className="w-full flex justify-between my-4 md:h-[21rem] //section">
+        <div className="w-[73%] //advert">
           <div className="image">
             <img src={AdImage} alt="Ad Image" />
           </div>
         </div>
-        <div className="side">
+        <div className="w-[26%] //side">
           <div className="topside">
             <div className="image">
               <img src={Easter} alt="" />
@@ -44,11 +44,18 @@ function Homepage() {
           </div>
         </div>
       </div>
-      <div className="hotdeal">
-        <h3>Hot Deal </h3>
+      <div className=" flex relative justify-between h-12">
+        <div className="absolute left-0 bg-primary_blue  rounded-tr-[10px] rounded-br-[10px] //hotdeal">
+          <h3 className="text-2xl text-white py-2 px-6">Hot Deal </h3>
+        </div>
+        <p className="z-50 absolute right-4 float-right">
+          <Link> see more</Link>
+        </p>
       </div>
-      <Content filterProduct={filterProduct} />
-      {/* <Content filterProduct={filterProduct} /> */}
+      <div>
+        <Content filterProduct={filterProduct} />
+        {/* <Content filterProduct={filterProduct} /> */}
+      </div>
     </div>
   );
 }

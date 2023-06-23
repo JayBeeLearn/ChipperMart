@@ -14,7 +14,7 @@ function CloseOrders() {
   console.log(cancelOrder);
   return (
     <>
-      <h3 className="text-left"> My Orders</h3>
+      <h3 className="pro_sec_title"> My Orders</h3>
       <hr />
 
       <div className="order-nav">

@@ -7,21 +7,20 @@ import "../styling/Checkout.css";
 import Checkout from "../pages/checkout/Checkout";
 
 function CheckoutLayout() {
-    const [checked, setChecked] = [false];
-    
-      const [products, setProducts] = useState(data);
+  const [checked, setChecked] = [false];
 
+  const [products, setProducts] = useState(data);
 
-      const savedForLater = products.filter(
-        (laterProduct) => laterProduct.category == "saved"
-      );
+  const savedForLater = products.filter(
+    (laterProduct) => laterProduct.category == "saved"
+  );
   return (
     <>
       <div className="page-title">
         <h2>checkout</h2>
       </div>
-      <section className="checkout-section">
-        <div className="user-details">
+      <section className=" sm:flex justify-between //checkout-section">
+        <div className="w-[100%] sm:w-[68%] user-details">
           <div className="delivery-details">
             <div className="details-title">
               <div className="details-heading">
@@ -42,7 +41,7 @@ function CheckoutLayout() {
             <div className="extra-details">
               <input
                 type="checkbox"
-                className="checkbox"
+                className="text-[12px] checkbox"
                 id="checkbox"
               />{" "}
               <label htmlFor="checkbox">
@@ -85,24 +84,24 @@ function CheckoutLayout() {
                 </p>
               </div>
             </div>
-            <div className="promotions">
+            <div className=" promotions">
               <p>
                 <b>Promotions</b>
               </p>
               <p>x LOYALDAY</p>
-              <div className="coupon-input">
+              <div className="w-[100%] sm:w-[60%] coupon-input">
                 <input
                   type="text"
                   placeholder="Enter Coupon"
-                  className="input-coupon"
+                  className="input-coupon  sm:w-[70%]"
                 />
-                <input type="submit" className="apply-coupon" value="Apply" />
+                <input type="submit" className="sm:w-[30%] apply-coupon" value="Apply" />
               </div>
             </div>
             <div className="place-order">
               <p>
                 By clicking this button, you agree with our{" "}
-                <Link to={'/policy'}>terms and conditions</Link>
+                <Link to={"/policy"}>terms and conditions</Link>
               </p>
               <button className="order-btn">Place Order</button>
             </div>
@@ -114,16 +113,16 @@ function CheckoutLayout() {
               summary 
               on the 
               right side  */}
-        <div className="cart-summary">
+        <div className="w-[100%] sm:w-[30%] cart-summary">
           <div className="order-details">
             <h3>Order Details</h3>
-            <Link to={'/mycart'}>
+            <Link to={"/mycart"}>
               Modify Cart <FaChevronRight />
             </Link>
           </div>
           <hr />
-                  <div className="order-items">
-                      <Checkout savedForLater={ savedForLater} />
+          <div className="order-items">
+            <Checkout savedForLater={savedForLater} />
           </div>
           <hr />
           <div className="subtotal">

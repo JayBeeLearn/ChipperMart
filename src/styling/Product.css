@@ -4,31 +4,31 @@
 
 
 
-.product-view {
+/* .product-view {
   display: flex;
-  /* height: 30rem; */
-  /* border: 2px solid turquoise; */
+  height: 30rem;
+  border: 2px solid turquoise;
   background-color: #fff;
   margin: 1rem 0;
   border-radius: 5px;
-}
+} */
 
-@media (max-width:420px) {
+/* @media (max-width:420px) {
   .product-view{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-}
+} */
 
-.view-images {
+/* .view-images {
   width: 50%;
-  /* border: 2px solid salmon; */
+  border: 2px solid salmon;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .main-image {
   height: 75%;

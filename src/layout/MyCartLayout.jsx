@@ -20,11 +20,11 @@ function MyCartLayout() {
       <div className="page-title">
         <h2>My Cart</h2>
       </div>
-      <section className="shopping-cart">
-        <div className="cart-items">
+      <section className=" sm:flex justify-between //shopping-cart">
+        <div className="w-[100%] sm:w-[68%] //cart-items">
           <Cart filterProducts={filterProducts} />
         </div>
-        <div className="cart-summary">
+        <div className="w-[100%] sm:w-[30%] cart-summary">
           <div className="cart-summary-top">
             <h3>Order Summary</h3>
             <p className="summary-items-length">

@@ -5,12 +5,14 @@ function Inbox() {
   const [message, setMessage] = useState(messages);
   return (
     <>
-      <h2 className="text-left">Inbox</h2>
+      <h2 className="pro_sec_title">Inbox</h2>
       <hr />
 
-      {message.map((item) => {
-        return <Message key={item.id} {...item} />;
-      })}
+      <section className="pro_sec inbox">
+        {message.map((item) => {
+          return <Message key={item.id} {...item} />;
+        })}
+      </section>
     </>
   );
 }

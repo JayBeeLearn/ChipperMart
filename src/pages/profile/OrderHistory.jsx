@@ -6,7 +6,7 @@ function OrderHistory() {
     <>
       
 
-      <div className="order-history">
+      <div className="pro_sec order-history">
         <Outlet />
       </div>
     </>

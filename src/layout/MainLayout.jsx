@@ -15,7 +15,7 @@ function MainLayout() {
         <Upper />
         <NavBar />
       </div>
-      <div className="content">
+      <div className="px-4 sm:px-12 //content">
         <Outlet />
       </div>
       <div className="bottom">

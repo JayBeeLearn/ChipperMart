@@ -12,7 +12,7 @@ function AnAddress() {
     <>
       
         <div className="address-top">
-          <h3 className="text-left">Delivery Address</h3>
+          <h3 className="pro_sec_title">Delivery Address</h3>
           <div className="add-btn">
             <Link to={"add-delivery-address"}>
               {" "}

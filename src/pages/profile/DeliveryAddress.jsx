@@ -6,7 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 function DeliveryAddress() {
   return (
     <>
-      <section className="delivery-address">
+      <section className="pro_sec delivery-address">
         <Outlet />
       </section>
     </>
