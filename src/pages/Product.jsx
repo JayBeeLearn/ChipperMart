@@ -32,7 +32,7 @@ function Product() {
   // console.log(data);
 
   const displayProduct = data.filter((product) => product.id === parseInt(id));
-  console.log(displayProduct);
+  // console.log(displayProduct);
 
   const savedAmount = displayProduct[0].discount - displayProduct[0].price;
 

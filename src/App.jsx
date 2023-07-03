@@ -1,6 +1,7 @@
 import { useState } from "react";
-import React from "react";
+import React, { createContext } from "react";
 import { FaSearch } from "react-icons/fa";
+// import { searchContext } from "./layout/Upper";
 
 import "../src/styling/ContentLayout.css";
 
@@ -30,12 +31,12 @@ import AuthLayout from "./layout/AuthLayout";
 import SignUp from "./pages/auth/SignUp";
 import ProfileLayout from "./layout/ProfileLayout";
 import AccountInfo from "./pages/profile/AccountInfo";
-import DeliveryAddress from './pages/profile/DeliveryAddress'
-import OrderHistory from './pages/profile/OrderHistory'
-import SavedItems from './pages/profile/SavedItems'
-import RecentlyViewed from './pages/profile/RecentlyViewed'
-import Inbox from './pages/profile/Inbox'
-import Logout from './pages/profile/Logout'
+import DeliveryAddress from "./pages/profile/DeliveryAddress";
+import OrderHistory from "./pages/profile/OrderHistory";
+import SavedItems from "./pages/profile/SavedItems";
+import RecentlyViewed from "./pages/profile/RecentlyViewed";
+import Inbox from "./pages/profile/Inbox";
+import Logout from "./pages/profile/Logout";
 import ProductLayout from "./layout/ProductLayout";
 import Product, { productLoader } from "./pages/Product";
 import MyCartLayout from "./layout/MyCartLayout";
@@ -48,6 +49,7 @@ import Cookies from "./pages/policy/Cookies";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Faq from "./pages/Faq";
+import SearchLayout from "./layout/SearchLayout";
 
 import { AddAddress } from "./pages/profile/DeliveryAddress";
 import AnAddress from "./pages/profile/AnAddress";
@@ -55,14 +57,23 @@ import OpenOrders from "./pages/profile/OpenOrders";
 import CloseOrders from "./pages/profile/CloseOrders";
 import OrderDetails from "./pages/profile/OrderDetails";
 import TrackOrder from "./pages/profile/TrackOrder";
+import Query from "./pages/search/Query";
 
+export const SearchContext = createContext();
 function App() {
+  const [searchQuery, setSearchQuery] = useState(null);
+
+  const [filterOptions, setFilterOptions] = useState([]);
+  const [categoryProducts, setCategoryProducts] = useState([]);
+  const [applyFilter, setApplyFilter] = useState([])
+  const [isApplyFilter, setIsApplyFilter] = useState(false)
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Homepage />} />
         <Route path="categories" element={<CategoriesLayout />}>
-          <Route index element={<Food />}/>
+          <Route index element={<Food />} />
           <Route index path="food" element={<Food />} />
           <Route path="babies" element={<Babies />} />
           <Route path="cleaning" element={<Cleaning />} />
@@ -72,29 +83,33 @@ function App() {
           <Route path="toiletries" element={<Toiletries />} />
           <Route path="vegetables" element={<Vegetables />} />
         </Route>
-        <Route path="auth" element={<AuthLayout />} >
+        <Route path="auth" element={<AuthLayout />}>
           <Route index path="login" element={<Login />} />
-          <Route  path="signup" element={<SignUp />} />
+          <Route path="signup" element={<SignUp />} />
         </Route>
         <Route path="profile" element={<ProfileLayout />}>
           <Route index path="account-info" element={<AccountInfo />} />
           <Route path="delivery-address" element={<DeliveryAddress />}>
-            <Route index element={<AnAddress />}/>
+            <Route index element={<AnAddress />} />
             <Route path="add-delivery-address" element={<AddAddress />} />
           </Route>
           <Route path="order-history" element={<OrderHistory />}>
-            <Route index  element={<OpenOrders />} />
+            <Route index element={<OpenOrders />} />
             <Route path="close-orders" element={<CloseOrders />} />
 
             <Route path="order-details/:order_id" element={<OrderDetails />} />
-            <Route path="track-order/:id" element={<TrackOrder />}/>
+            <Route path="track-order/:id" element={<TrackOrder />} />
           </Route>
           <Route path="saved-items" element={<SavedItems />} />
           <Route path="recently-viewed" element={<RecentlyViewed />} />
           <Route path="inbox" element={<Inbox />} />
           <Route path="logout" element={<Logout />} />
         </Route>
-        <Route path="product" element={<ProductLayout />} loader={productLoader} >
+        <Route
+          path="product"
+          element={<ProductLayout />}
+          loader={productLoader}
+        >
           <Route path=":id" element={<Product />} />
         </Route>
 
@@ -104,12 +119,16 @@ function App() {
           <Route path="terms-and-conditions" element={<Terms />} />
           <Route path="privacy-policy" element={<Privacy />} />
           <Route path="return-policy" element={<Return />} />
-          <Route path="cookies-policy" element={<Cookies />}/>
+          <Route path="cookies-policy" element={<Cookies />} />
         </Route>
 
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="contact-us" element={<ContactUs />} />
-        <Route path="/faq" element={<Faq />}/>
+        <Route path="/faq" element={<Faq />} />
+
+        <Route path="/query" element={<SearchLayout />}>
+          <Route path=":query" element={<Query />} />
+        </Route>
       </Route>
     )
   );
@@ -126,7 +145,22 @@ function App() {
           <Route path="/categories/toiletries" element={<Toiletries />} />
           <Route path="/categories/vegetables" element={<Vegetables />} />
         </Routes> */}
-      <RouterProvider router={router} />
+      <SearchContext.Provider
+        value={{
+          searchQuery,
+          setSearchQuery,
+          filterOptions,
+          setFilterOptions,
+          categoryProducts,
+          setCategoryProducts,
+          applyFilter, 
+          setApplyFilter,
+          isApplyFilter,
+          setIsApplyFilter
+        }}
+      >
+        <RouterProvider router={router} />
+      </SearchContext.Provider>
     </main>
   );
 }

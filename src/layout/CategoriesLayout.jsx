@@ -1,44 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
+import data from "../assets/Data";
 
 import { Link, NavLink } from "react-router-dom";
 
 import "../styling/Category.css";
 import { Outlet } from "react-router-dom";
+import { SearchContext } from "../App";
 
 function CategoriesLayout() {
   // console.log(Outlet);
+
+  const { filterOptions, categoryProducts, setApplyFilter, setIsApplyFilter } =
+    useContext(SearchContext);
+  const pro = categoryProducts.map((item) => {
+    return item;
+  });
+
+  const subCatFilter = categoryProducts;
+  // console.log(categoryProducts);
+  // console.log('fil.' + filterOptions);
   return (
     <>
       <h2>Categories</h2>
+      {/* {filterOptions} */}
       <div className="categories">
         <div className="hidden sm:block side">
           <h2 className="title">Category</h2>
+
           <nav>
-            <ul>
-              <li>
-                <Link to={"/categories/food"}>Food</Link>
-              </li>
-              <li>
-                <Link to={"/categories/vegetables"}>Vegetable</Link>
-              </li>
-              <li>
-                <NavLink to={"/categories/household"}>Household</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/categories/snacks"}>Snacks</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/categories/drinks"}>Drinks</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/categories/toiletries"}>Toiletries</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/categories/babies"}>Babies</NavLink>
-              </li>
-              <li>
-                <NavLink to={"/categories/cleaning"}>Cleaning</NavLink>
-              </li>
+            <ul className="mx-4">
+              {filterOptions.map((category, index) => {
+                return (
+                  <li key={index}>
+                    <span
+                      onClick={() => {
+                        let filter;
+                        category == "all"
+                          ? (filter = subCatFilter)
+                          : (filter = subCatFilter.filter(
+                              (item) => item.subcategory == category
+                            ));
+                        setApplyFilter(filter);
+                        // setIsApplyFilter(true);
+                        // console.log(filter);
+                      }}
+                      className="bg-transparent hover:text-primary_orange font-bold cursor-pointer capitalize px-6"
+                    >
+                      {category}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
@@ -66,7 +78,7 @@ function CategoriesLayout() {
 
             <li>
               <input type="radio" name="price" />
-             Above N40,000
+              Above N40,000
             </li>
           </form>
         </div>

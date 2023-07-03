@@ -26,7 +26,7 @@ function Item({
   // console.log(wishlist);
   return (
     <>
-      <div className="col item">
+      <div className="col item bg-white rounded">
         <div className="wishlist">
           <button className="nb-btn btn-wishlist" onClick={() => {
             setWishList(!wishlist)

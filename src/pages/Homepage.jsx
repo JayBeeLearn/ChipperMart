@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { SearchContext } from "../App";
+
 
 import { FaHome } from "react-icons/fa";
 
@@ -18,12 +20,14 @@ function Homepage() {
 
   const filterProduct = products.filter((product) => product.id).slice(0, 8);
 
+  const {searchQuery} = useContext(SearchContext)
+
   // console.log(filterProduct);
 
   return (
     <div className="homepage">
       <h1>
-        Home Page <FaHome />
+        Home Page {searchQuery} <FaHome />
       </h1>
       <div className="w-full flex justify-between my-4 md:h-[21rem] //section">
         <div className="w-[73%] //advert">
