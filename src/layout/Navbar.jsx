@@ -12,7 +12,6 @@ function Navbar() {
   const [showBar, setShowBar] = useState(false);
   const { user, logIn } = useGlobalContext();
 
-
   return (
     <section className="hero">
       <nav>
@@ -26,8 +25,8 @@ function Navbar() {
               </Link>
             </div>
 
-            <div className="w-[60%] flex content-center  justify-end">
-              <span>
+            <div className="w-[60%] flex text-sm  justify-end">
+              <span className="my-auto">
                 {user.length === 1 ? (
                   <span id="myAccount">
                     <Link
@@ -38,17 +37,19 @@ function Navbar() {
                     </Link>
                   </span>
                 ) : (
-                  <span  id="myAccount">
-                    <Link className="pt-2" to={"auth/login"}>Sign In</Link>
+                  <span id="myAccount">
+                    <Link className="my-auto" to={"auth/login"}>
+                      Sign In
+                    </Link>
                   </span>
                 )}
               </span>
               <span
                 id="myCart"
-                className="bg-primary_orange py-[10px] px-[15px] rounded-[7px] mx-2 "
+                className="bg-primary_orange py-[10px] px-[15px] rounded-[7px] mx-2 my-auto "
               >
                 <Link to={"mycart"} className="text-white">
-                  My Cart <FaShoppingCart />
+                  Cart <FaShoppingCart />
                 </Link>
               </span>
 
@@ -64,7 +65,7 @@ function Navbar() {
                   // alert()
                 }}
               >
-                <FaBars  />
+                <FaBars />
               </label>
             </div>
           </div>
