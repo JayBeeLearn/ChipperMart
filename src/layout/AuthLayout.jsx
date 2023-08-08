@@ -7,8 +7,8 @@ import Cart from "../../src/images/cart.png";
 
 function AuthLayout() {
   return (
-    <section className="login">
-      <div className="login-form">
+    <section className="sm:flex justify-between content-center //login ">
+      <div className="sm:w-[45%] h-[90%] py-[10px] px-5 bg-white  border-r-[10px] //login-form">
         <p>Hi, welcome</p>
 
         <span className="sign-in-btn">
@@ -32,7 +32,7 @@ function AuthLayout() {
         </div>
       </div>
 
-      <div className="login-img">
+      <div className="sm:w-[45%] flex justify-between content-center my-auto //login-img">
         <div className="login-image">
           <img src={Cart} alt="" />
         </div>

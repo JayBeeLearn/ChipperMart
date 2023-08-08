@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBars, FaChevronDown } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaShoppingCart } from "react-icons/fa";
 import Logo from "../images/logo-white.png";
 import { useGlobalContext } from "../context";
 
@@ -26,7 +26,7 @@ function Navbar() {
               </Link>
             </div>
 
-            <div className="w-[60%] flex flex-row justify-end">
+            <div className="w-[60%] flex content-center  justify-end">
               <span>
                 {user.length === 1 ? (
                   <span id="myAccount">
@@ -38,15 +38,23 @@ function Navbar() {
                     </Link>
                   </span>
                 ) : (
-                  <span id="myAccount">
-                    <Link to={"auth/login"}>Sign In</Link>
+                  <span  id="myAccount">
+                    <Link className="pt-2" to={"auth/login"}>Sign In</Link>
                   </span>
                 )}
+              </span>
+              <span
+                id="myCart"
+                className="bg-primary_orange py-[10px] px-[15px] rounded-[7px] mx-2 "
+              >
+                <Link to={"mycart"} className="text-white">
+                  My Cart <FaShoppingCart />
+                </Link>
               </span>
 
               <label
                 htmlFor="togglenav"
-                className="text-white text-[24px] px-3 //navbar-toggle"
+                className="text-white text-[24px] px-3 pt-2 //navbar-toggle"
                 onClick={() => {
                   setShowBar((showBar) => !showBar);
                   const nav = document.getElementById("navlinks");
@@ -56,7 +64,7 @@ function Navbar() {
                   // alert()
                 }}
               >
-                <FaBars />
+                <FaBars  />
               </label>
             </div>
           </div>
