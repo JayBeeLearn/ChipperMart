@@ -1,42 +1,37 @@
 import React, { useState, useContext } from "react";
 import { FaSearch, FaShoppingCart, FaChevronDown } from "react-icons/fa";
-import { SearchContext } from "../App";
+// import { SearchContext } from "../App";
+import { useGlobalContext } from "../context";
 // import "../styling/layout.css";
 import Logo from "../images/logo.png";
 
 import { Link } from "react-router-dom";
 import data from "../assets/Data";
 
-
 function Upper() {
-  const [query, setQuery] = useState('')
-  const [products, setProducts] = useState(data)
+  const [query, setQuery] = useState("");
+  // const { user, logIn } = useContext(SearchContext);
+  const { user, logIn } = useGlobalContext()
 
-  const {searchQuery, setSearchQuery} = useContext(SearchContext)
+  let username;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   // setQuery(e.target.value)
-  //   setSearchQuery(query)
+  user.length === 1 ? (username = user[0].firstname) : " ";
 
-  //   const searchProducts = products.filter((product) => product.name.toLowerCase().includes(query.toLowerCase())||product.category.toLowerCase().includes(query.toLowerCase()));
+  // const username = user[0].firstname;
 
-  //   console.log(searchProducts);
-    
-  // }
   return (
     <section className="hero h-14">
       <section
         id="top"
-        className="hidden sm:flex flex-row justify-between items-center my-4 mx-0 div_padding  w-[100%] //top"
+        className=" sm:flex flex-row justify-between items-center my-4 mx-0 div_padding  w-[100%] //top"
       >
-        <div className="w-[15%] //logo">
+        <div className="hidden sm:block sm:w-[15%]  //logo">
           <Link to="/">
             <img src={Logo} alt="Logo" className="w-[100%] object-contain" />
           </Link>
         </div>
         {/* {searchQuery} */}
-        <div className="w-[25%] sm:w-[40%] md:w-[50%] lg:w-[50%] search">
+        <div className="w-[80%] m-auto sm:w-[40%] md:w-[50%] lg:w-[50%] search">
           <div>
             <form
               action=""
@@ -44,6 +39,7 @@ function Upper() {
             >
               <input
                 type="text"
+                id="query"
                 onChange={(e) => {
                   setQuery(e.target.value);
                 }}
@@ -65,12 +61,21 @@ function Upper() {
           {/* {query} */}
         </div>
 
-        <div className="w-[25%] flex justify-end items-center text-sm sm:w-[30%] md:w-[25%]  //user">
-          <span id="myAccount">
-            <Link to={"profile/account-info"}>
-              My Account <FaChevronDown className="ml-1" />
-            </Link>
-          </span>
+        <div className="hidden sm:flex sm:w-[28%]  sm:justify-end items-center text-sm  md:w-[25%]  //user">
+          {user.length === 1 ? (  <span id="myAccount">
+              <Link
+                className="bg-primary_orange text-white rounded py-2 px-6"
+                to={"profile/account-info"}
+              >
+                {username} <FaChevronDown className="ml-1" />
+              </Link>
+            </span>
+          
+          ) : (
+            <span id="myAccount">
+              <Link to={"auth/login"}>Sign In</Link>
+            </span>
+          )}
           <span
             id="myCart"
             className="bg-primary_orange py-[10px] px-[15px] rounded-[7px] ml-2 "

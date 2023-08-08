@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaCaretRight, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import data from "../assets/Data";
+import { useGlobalContext } from "../context";
 
 import "../styling/Checkout.css";
 import Checkout from "../pages/checkout/Checkout";
@@ -9,11 +10,14 @@ import Checkout from "../pages/checkout/Checkout";
 function CheckoutLayout() {
   const [checked, setChecked] = [false];
 
-  const [products, setProducts] = useState(data);
+  // const [products, setProducts] = useState(data);
+  const { products, items, total } = useGlobalContext();
 
-  const savedForLater = products.filter(
-    (laterProduct) => laterProduct.category == "saved"
-  );
+  const savedForLater = products.filter((cartItems) => cartItems.inCart);
+
+  // let subtotal = total * 0.025;
+
+  const subtotal = Math.round(total * 0.025);
   return (
     <>
       <div className="page-title">
@@ -95,7 +99,11 @@ function CheckoutLayout() {
                   placeholder="Enter Coupon"
                   className="input-coupon  sm:w-[70%]"
                 />
-                <input type="submit" className="sm:w-[30%] apply-coupon" value="Apply" />
+                <input
+                  type="submit"
+                  className="sm:w-[30%] apply-coupon"
+                  value="Apply"
+                />
               </div>
             </div>
             <div className="place-order">
@@ -129,18 +137,18 @@ function CheckoutLayout() {
             <p>
               <b>Sub Total</b>
             </p>
-            <h5>24,500</h5>
+            <h5>N{total}</h5>
           </div>
           <div className="delivery-charges">
             <p className="delivery-charges">Delivery Charges</p>
 
-            <p className="delivery-charges-details">N500</p>
+            <p className="delivery-charges-details">N{subtotal}</p>
           </div>
           <div className="subtotal">
-            <p>
-              <b> Total</b>
-            </p>
-            <h5>24,500</h5>
+            <h2 className="text-xl">
+              <b> Total: {subtotal + total }</b>
+            </h2>
+            <h5></h5>
           </div>
         </div>
       </section>

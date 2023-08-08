@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import data from "../assets/Data";
+import { useGlobalContext } from "../context";
 import { useLoaderData, useParams } from "react-router-dom";
+// const { products } = useGlobalContext();
 
 import "../styling/Product.css";
 import {
@@ -19,53 +21,48 @@ import {
 import AddToCart from "../components/AddToCart";
 
 function Product() {
-  // const product = useLoaderData()
-  // const product = data
-  // console.log(product);
-
   const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
 
   // console.log(id);
+  const {products, increase, decrease} = useGlobalContext()
 
-  // console.log(data);
-
-  const displayProduct = data.filter((product) => product.id === parseInt(id));
-  // console.log(displayProduct);
+  const displayProduct = products.filter(
+    (product) => product.id === parseInt(id)
+  );
 
   const savedAmount = displayProduct[0].discount - displayProduct[0].price;
 
-  // const { name, image, price, category } = displayProduct
-
-  // console.log(name);
+  const { name, image, price, category, discount, amount, inCart, wishlist } = displayProduct[0];
+  const productID = displayProduct[0].id;
 
   return (
     <>
       <section className="product-layout">
         <div className="page-title">
-          <h2>{displayProduct[0].name}</h2>
+          <h2>{name}</h2>
         </div>
         <div className="bg-white my-4 rounded-md flex justify-center items-center flex-col sm:flex sm:flex-row //product-view">
           <div className="flex flex-col justify-center items-center sm:w-1/2 //view-images">
             <div className="main-image">
-              <img src={displayProduct[0].image} alt="" />
+              <img src={image} alt="" />
             </div>
             <div className="other-images">
               <div className="other-image image-1">
-                <img src={displayProduct[0].image} alt="" />
+                <img src={image} alt="" />
               </div>
               <div className="other-image image-2">
-                <img src={displayProduct[0].image} alt="" />
+                <img src={image} alt="" />
               </div>
               <div className="other-image image-3">
-                <img src={displayProduct[0].image} alt="" />
+                <img src={image} alt="" />
               </div>
             </div>
           </div>
           <div className="view-details">
             <div className="details-top">
-              <h3 className="product-name">{displayProduct[0].name}</h3>
+              <h3 className="product-name">{name}</h3>
 
               <div className="wishlist">
                 <button className="nb-btn btn-wishlist">
@@ -80,13 +77,9 @@ function Product() {
             </div>
             <div className="price">
               <p>
-                <span className="discount-price">
-                  N{displayProduct[0].price}
-                </span>
+                <span className="discount-price">N{price}</span>
 
-                <span className="main-price">
-                  N{displayProduct[0].discount}
-                </span>
+                <span className="main-price">N{discount}</span>
 
                 <span className="saved"> You have save {savedAmount}</span>
               </p>
@@ -96,20 +89,16 @@ function Product() {
                 <button
                   className="qtn-btn"
                   onClick={() => {
-                    if (quantity <= 1) {
-                      setQuantity(1);
-                    } else {
-                      setQuantity(quantity - 1);
-                    }
+                    decrease(productID)
                   }}
                 >
                   -
                 </button>
-                <span className="quantity">{quantity} </span>
+                <span className="quantity">{amount} </span>
                 <button
                   className="qtn-btn"
                   onClick={() => {
-                    setQuantity(quantity + 1);
+                    increase(productID)
                   }}
                 >
                   +
@@ -117,7 +106,12 @@ function Product() {
               </div>
             </div>
             <div className="add-to-cart">
-              <AddToCart className="addToCart" />
+              <AddToCart
+                id={productID}
+                hello={productID}
+                className="addToCart"
+                onClick={() => {}}
+              />
               {/* <button className="addToCart">
                 Add to cart {<FaShoppingCart />}
               </button> */}

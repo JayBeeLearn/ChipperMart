@@ -47,6 +47,8 @@ const data = [
     discount: "5000",
     image: Spaghetti,
     wishlist: true,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 2,
@@ -56,7 +58,9 @@ const data = [
     price: "2000",
     discount: "2650",
     image: Carrot,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 3,
@@ -66,7 +70,9 @@ const data = [
     price: "1800",
     discount: "2300",
     image: Malt,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 4,
@@ -76,7 +82,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: OkroSoup,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 5,
@@ -86,7 +94,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: BeansPorridge,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -97,7 +107,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: AfangSoup,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 7,
@@ -107,7 +119,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: FufuSoup,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -118,7 +132,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: Lettuce,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -129,7 +145,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: pepper,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -140,7 +158,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: onions,
-    wishlist: true,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -151,6 +171,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: avocado,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -161,6 +184,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: scent,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -171,6 +197,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: rice,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -181,16 +210,22 @@ const data = [
     price: "1750",
     discount: "2000",
     image: semovita,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
-    id: 14,
+    id: 81,
     name: "Big Bull",
     category: "household",
     subcategory: "hotdeals",
     price: "1750",
     discount: "2000",
     image: bigbull,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -201,6 +236,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: indomie,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -211,6 +249,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: freshTomatoes,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -221,6 +262,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: peanut,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -231,6 +275,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: biscuit,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -241,6 +288,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: garri,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -251,6 +301,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: tomato,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -261,6 +314,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: plantain,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -271,6 +327,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: malt,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -281,6 +340,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: wines,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -291,6 +353,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: cokePack,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -301,6 +366,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: drink,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -311,6 +379,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: Maltina,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -321,6 +392,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: sunlight,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -331,6 +405,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: soap,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -341,6 +418,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: cream,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -351,6 +431,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: dettol,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -361,6 +444,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: sunlightPack,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -371,6 +457,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: babies,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -381,6 +470,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby1,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -391,6 +483,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby2,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -401,16 +496,22 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby3,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
-    id: 35,
+    id: 80,
     name: "baby4",
     category: "babies",
     subcategory: "Another Subcategory",
     price: "1750",
     discount: "2000",
     image: baby4,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   //   DUPLICATE DATA FROM HERE JUST TO PROPERLY BE ABLE TO DISPLAY EVERYTHING AS NEEDED IN THE FRONT END SIDE OF THE WEB PROJECT - LONG COMMENT WILL HELP INDICATE IN OVERVIEW
@@ -422,6 +523,9 @@ const data = [
     price: "1800",
     discount: "2300",
     image: Malt,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 37,
@@ -431,6 +535,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: OkroSoup,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 38,
@@ -440,6 +547,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: BeansPorridge,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -450,6 +560,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: AfangSoup,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 40,
@@ -459,6 +572,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: FufuSoup,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
   {
     id: 41,
@@ -468,6 +584,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: Lettuce,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -478,6 +597,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: pepper,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -488,6 +610,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: onions,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -498,6 +623,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: avocado,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -508,6 +636,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: scent,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -518,6 +649,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: rice,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -528,6 +662,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: semovita,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -538,6 +675,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: bigbull,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -548,6 +688,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: indomie,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -558,6 +701,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: freshTomatoes,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -568,6 +714,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: peanut,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -578,6 +727,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: biscuit,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -588,6 +740,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: garri,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -598,6 +753,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: tomato,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -608,6 +766,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: plantain,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -618,6 +779,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: malt,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -628,6 +792,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: wines,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -638,6 +805,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: cokePack,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -648,6 +818,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: drink,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -658,6 +831,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: Maltina,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -668,16 +844,22 @@ const data = [
     price: "1750",
     discount: "2000",
     image: sunlight,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
-    id: 62,
+    id: 63,
     name: "Soap",
     category: "toiletries",
     subcategory: "Last Subcategory",
     price: "1750",
     discount: "2000",
     image: soap,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -688,6 +870,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: cream,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -698,6 +883,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: dettol,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -708,6 +896,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: sunlightPack,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -718,6 +909,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: babies,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -728,6 +922,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby1,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -738,6 +935,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby2,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -748,6 +948,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby3,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 
   {
@@ -758,6 +961,9 @@ const data = [
     price: "1750",
     discount: "2000",
     image: baby4,
+    wishlist: false,
+    inCart: false,
+    amount: 1,
   },
 ];
 

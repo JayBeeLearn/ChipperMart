@@ -1,6 +1,7 @@
 import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import Logo from "../images/logo-white.png";
+import { useGlobalContext } from "../context";
 
 import "../styling/layout.css";
 
@@ -9,12 +10,14 @@ import { useState } from "react";
 
 function Navbar() {
   const [showBar, setShowBar] = useState(false);
+  const { user, logIn } = useGlobalContext();
+
 
   return (
     <section className="hero">
       <nav>
         <div className={` bg-primary_blue py-4  //navbar`} id="navbar">
-          <div className="navbar-control py-4 px-4">
+          <div className="xs:flex sm:hidden navbar-control  px-4">
             {/* <input type="checkbox" className="checkbox" id="checkbox" /> */}
 
             <div className="w-[30%] flex justify-between items-center //small-nav-image">
@@ -24,10 +27,21 @@ function Navbar() {
             </div>
 
             <div className="w-[60%] flex flex-row justify-end">
-              <span className="my-acc" id="myAccount">
-                <Link to={"profile/account-info"}>
-                  My Account <FaChevronDown />
-                </Link>
+              <span>
+                {user.length === 1 ? (
+                  <span id="myAccount">
+                    <Link
+                      className="bg-primary_orange text-white rounded py-2 px-6"
+                      to={"profile/account-info"}
+                    >
+                      {username} <FaChevronDown className="ml-1" />
+                    </Link>
+                  </span>
+                ) : (
+                  <span id="myAccount">
+                    <Link to={"auth/login"}>Sign In</Link>
+                  </span>
+                )}
               </span>
 
               <label

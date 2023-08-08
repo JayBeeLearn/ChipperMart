@@ -7,26 +7,27 @@ import Content from "../../Contents";
 import data from "../../assets/Data";
 
 import "../../styling/ContentLayout.css";
-import { SearchContext } from "../../App";
+// import { SearchContext } from "../../App";
+import { useGlobalContext } from "../../context";
 
 function Food({}) {
-  const [products, setProducts] = useState(data);
+  // const [products, setProducts] = useState(data);
+  const { products } = useGlobalContext();
+
   let filterProduct;
 
-    let { isApplyFilter, applyFilter, setApplyFilter, setIsApplyFilter } =
-      useContext(SearchContext);
-
-    const categoryProduct = products.filter(
-      (product) => product.category == "food"
+  let { isApplyFilter, applyFilter, setApplyFilter, setIsApplyFilter } =
+    useGlobalContext();
+  const categoryProduct = products.filter(
+    (product) => product.category == "food"
   );
-  setIsApplyFilter(false)
+  setIsApplyFilter(false);
 
-    if (isApplyFilter) {
-      filterProduct = applyFilter;
-    } else {
-      filterProduct = categoryProduct;
-    }
-  
+  if (isApplyFilter) {
+    filterProduct = applyFilter;
+  } else {
+    filterProduct = categoryProduct;
+  }
 
   return (
     <>

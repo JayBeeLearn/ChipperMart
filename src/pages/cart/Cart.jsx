@@ -5,7 +5,7 @@ import "../../styling/components.css";
 import CartItem from "./CartItem";
 
 function Cart({ filterProducts }) {
-  console.log(filterProducts);
+  // console.log(filterProducts);
   // const cartProducts = filterProducts;
 
   return (

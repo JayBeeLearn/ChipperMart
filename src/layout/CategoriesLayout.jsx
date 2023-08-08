@@ -5,13 +5,14 @@ import { Link, NavLink } from "react-router-dom";
 
 import "../styling/Category.css";
 import { Outlet } from "react-router-dom";
-import { SearchContext } from "../App";
+// import { SearchContext } from "../App";
+import { useGlobalContext } from "../context";
 
 function CategoriesLayout() {
   // console.log(Outlet);
 
   const { filterOptions, categoryProducts, setApplyFilter, setIsApplyFilter } =
-    useContext(SearchContext);
+    useGlobalContext();
   const pro = categoryProducts.map((item) => {
     return item;
   });

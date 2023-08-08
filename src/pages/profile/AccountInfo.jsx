@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { useContext } from "react";
+// import { SearchContext } from "../../App";
 
+import { useGlobalContext } from "../../context";
 function AccountInfo() {
+
+  const { user } = useGlobalContext()
+  
+  const [fName, setFName] = useState(user[0].firstname)
+
+  console.log(user);
+
+  const { firstname, surname, email, password, phoneNumber } = user[0];
+  console.log(user[0].firstname);
+
   return (
     < >
       <h2 className="pro_sec_title ">Account Information</h2>
@@ -10,22 +23,24 @@ function AccountInfo() {
           <form action="">
             <div className="form-group">
               <label htmlFor="firstname">First Name</label>
-              <input type="text" value={"John"} />
+              <input type="text" value={fName} onChange={(e) => {
+                setFName(e.target.value)
+              }}/>
             </div>
 
             <div className="form-group">
               <label htmlFor="lastname">Last Name</label>
-              <input type="text" value={"Doe"} />
+              <input type="text" value={surname} />
             </div>
 
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
-              <input type="email" value={"johndoe@gmail.com"} />
+              <input type="email" value={email} />
             </div>
 
             <div className="form-group">
               <label htmlFor="phonenumber">Phone Number</label>
-              <input type="text" value={"08042654855"} />
+              <input type="text" value={phoneNumber} />
             </div>
 
             <div className="change-password">

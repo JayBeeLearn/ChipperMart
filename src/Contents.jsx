@@ -4,7 +4,8 @@ import "./content.css";
 import data from "./assets/Data";
 import Item from "./Item";
 
-import { SearchContext } from "./App";
+// import { SearchContext } from "./App";
+import { useGlobalContext } from "./context";
 
 // const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 // const allCategories = ['all', ...new Set(data.map((item) => item.subcategory))]
@@ -19,7 +20,7 @@ function Content({ test, filterProduct, categoryItems }) {
     ...new Set(filterProduct.map((item) => item.subcategory)),
   ];
 
-  const { setFilterOptions, setCategoryProducts } = useContext(SearchContext)
+  const { setFilterOptions, setCategoryProducts } = useGlobalContext()
 
   // const category = filterProduct[0].category
 

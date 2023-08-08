@@ -54,6 +54,7 @@
     /* color: green; */
     color: var(--deep-blue);
     font-weight: bolder;
+    font-size: 2rem;
 }
 
 .login-form .form{

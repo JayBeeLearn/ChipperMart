@@ -1,9 +1,68 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React, { createContext } from "react";
 import { FaSearch } from "react-icons/fa";
 // import { searchContext } from "./layout/Upper";
 
 import "../src/styling/ContentLayout.css";
+
+// LAYOUTS
+import {
+  MainLayout,
+  CategoriesLayout,
+  AuthLayout,
+  ProfileLayout,
+  ProductLayout,
+  MyCartLayout,
+  CheckoutLayout,
+  PolicyLayout,
+  SearchLayout,
+} from "./layout";
+
+// PAGES
+import {
+  Homepage,
+  AboutUs,
+  ContactUs,
+  Faq,
+  Product,
+  productLoader,
+} from "./pages";
+
+// AUTH PAGES
+import { Login, SignUp } from "./pages/auth";
+
+// CATEGORIES PAGES
+
+import {
+  Food,
+  Babies,
+  Cleaning,
+  Drinks,
+  Household,
+  Snacks,
+  Toiletries,
+  Vegetables,
+} from "./pages/categories";
+
+// PROFILE PAGES
+import {
+  AccountInfo,
+  DeliveryAddress,
+  OrderHistory,
+  SavedItems,
+  RecentlyViewed,
+  Inbox,
+  Logout,
+  AddAddress,
+  AnAddress,
+  OpenOrders,
+  CloseOrders,
+  OrderDetails,
+  TrackOrder,
+} from "./pages/profile";
+
+// POLICY PAGES
+import { Terms, Privacy, Return, Cookies } from "./pages/policy";
 
 import {
   createBrowserRouter,
@@ -15,58 +74,14 @@ import {
 } from "react-router-dom";
 
 // pages
-import Homepage from "./pages/Homepage";
-import Food from "./pages/categories/Food";
-import Babies from "./pages/categories/Babies";
-import Cleaning from "./pages/categories/Cleaning";
-import Drinks from "./pages/categories/Drinks";
-import Household from "./pages/categories/Household";
-import Snacks from "./pages/categories/Snacks";
-import Toiletries from "./pages/categories/Toiletries";
-import Vegetables from "./pages/categories/Vegetables";
-import MainLayout from "./layout/MainLayout";
-import CategoriesLayout from "./layout/CategoriesLayout";
-import Login from "./pages/auth/Login";
-import AuthLayout from "./layout/AuthLayout";
-import SignUp from "./pages/auth/SignUp";
-import ProfileLayout from "./layout/ProfileLayout";
-import AccountInfo from "./pages/profile/AccountInfo";
-import DeliveryAddress from "./pages/profile/DeliveryAddress";
-import OrderHistory from "./pages/profile/OrderHistory";
-import SavedItems from "./pages/profile/SavedItems";
-import RecentlyViewed from "./pages/profile/RecentlyViewed";
-import Inbox from "./pages/profile/Inbox";
-import Logout from "./pages/profile/Logout";
-import ProductLayout from "./layout/ProductLayout";
-import Product, { productLoader } from "./pages/Product";
-import MyCartLayout from "./layout/MyCartLayout";
-import CheckoutLayout from "./layout/CheckoutLayout";
-import PolicyLayout from "./layout/PolicyLayout";
-import Terms from "./pages/policy/Terms";
-import Privacy from "./pages/policy/Privacy";
-import Return from "./pages/policy/Return";
-import Cookies from "./pages/policy/Cookies";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import Faq from "./pages/Faq";
-import SearchLayout from "./layout/SearchLayout";
 
-import { AddAddress } from "./pages/profile/DeliveryAddress";
-import AnAddress from "./pages/profile/AnAddress";
-import OpenOrders from "./pages/profile/OpenOrders";
-import CloseOrders from "./pages/profile/CloseOrders";
-import OrderDetails from "./pages/profile/OrderDetails";
-import TrackOrder from "./pages/profile/TrackOrder";
 import Query from "./pages/search/Query";
 
-export const SearchContext = createContext();
-function App() {
-  const [searchQuery, setSearchQuery] = useState(null);
+// export const SearchContext = createContext();
 
-  const [filterOptions, setFilterOptions] = useState([]);
-  const [categoryProducts, setCategoryProducts] = useState([]);
-  const [applyFilter, setApplyFilter] = useState([])
-  const [isApplyFilter, setIsApplyFilter] = useState(false)
+
+function App() {
+
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -134,33 +149,7 @@ function App() {
   );
   return (
     <main>
-      {/* <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/categories/food" element={<Food />} />
-          <Route path="/categories/babies" element={<Babies />} />
-          <Route path="/categories/cleaning" element={<Cleaning />} />
-          <Route path="/categories/drinks" element={<Drinks />} />
-          <Route path="/categories/household" element={<Household />} />
-          <Route path="/categories/snacks" element={<Snacks />} />
-          <Route path="/categories/toiletries" element={<Toiletries />} />
-          <Route path="/categories/vegetables" element={<Vegetables />} />
-        </Routes> */}
-      <SearchContext.Provider
-        value={{
-          searchQuery,
-          setSearchQuery,
-          filterOptions,
-          setFilterOptions,
-          categoryProducts,
-          setCategoryProducts,
-          applyFilter, 
-          setApplyFilter,
-          isApplyFilter,
-          setIsApplyFilter
-        }}
-      >
-        <RouterProvider router={router} />
-      </SearchContext.Provider>
+      <RouterProvider router={router} />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { SearchContext } from "../App";
-
+// import { SearchContext } from "../App";
+import { useGlobalContext } from "../context";
 
 import { FaHome } from "react-icons/fa";
 
@@ -16,33 +16,30 @@ import "../styling/Homepage.css";
 import { Link } from "react-router-dom";
 
 function Homepage() {
-  const [products, setProducts] = useState(data);
+  // const [products, setProducts] = useState(data);
+  const { searchQuery, products } = useGlobalContext();
 
-  const filterProduct = products.filter((product) => product.id).slice(0, 8);
-
-  const {searchQuery} = useContext(SearchContext)
+  const filterProduct = products.filter((product) => product.id).slice(0, 6);
 
   // console.log(filterProduct);
 
   return (
     <div className="homepage">
-      <h1>
-        Home Page {searchQuery} <FaHome />
-      </h1>
+
       <div className="w-full flex justify-between my-4 md:h-[21rem] //section">
-        <div className="w-[73%] //advert">
+        <div className="w-[72%] //advert">
           <div className="image">
             <img src={AdImage} alt="Ad Image" />
           </div>
         </div>
-        <div className="w-[26%] //side">
-          <div className="topside">
-            <div className="image">
+        <div className="w-[27%] //side">
+          <div className=" //topside">
+            <div className="">
               <img src={Easter} alt="" />
             </div>
           </div>
-          <div className="bottomside">
-            <div className="image">
+          <div className=" //bottomside">
+            <div className="">
               <img src={Exclusive} alt="" />
             </div>
           </div>

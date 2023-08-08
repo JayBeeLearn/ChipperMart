@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
-import { SearchContext } from "../../App";
+// import { SearchContext } from "../../App";
+import { useGlobalContext } from "../../context";
 
 import "../../styling/ContentLayout.css";
 
@@ -7,17 +8,15 @@ import data from "../../assets/Data";
 
 import Content from "../../Contents";
 
-
-
 // icons
 import { FaBaby, FaLeaf } from "react-icons/fa";
 
 function Vegetables() {
-  const [products, setProducts] = useState(data);
+  // const [products, setProducts] = useState(data);
+  const { products } = useGlobalContext();
 
-  let { isApplyFilter, applyFilter, setApplyFilterset, IsApplyFilter } =
-    useContext(SearchContext);
-
+  let { isApplyFilter, applyFilter, setApplyFilter, setIsApplyFilter } =
+    useGlobalContext();
   const categoryProduct = products.filter(
     (product) => product.category == "vegetables"
   );

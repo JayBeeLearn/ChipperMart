@@ -12,11 +12,17 @@ function AuthLayout() {
         <p>Hi, welcome</p>
 
         <span className="sign-in-btn">
-          <NavLink to={"login"} className="btn">
+          <NavLink
+            to={"login"}
+            className="bg-transparent text-xl border-none rounded py-2 px-2 hover:text-white hover:bg-primary_orange //btn "
+          >
             Login
           </NavLink>
 
-          <NavLink to={"signup"} className="btn">
+          <NavLink
+            to={"signup"}
+            className="bg-transparent text-xl border-none rounded py-2 px-2 hover:text-white hover:bg-primary_orange  //btn"
+          >
             Sign Up
           </NavLink>
         </span>

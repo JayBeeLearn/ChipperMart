@@ -6,12 +6,12 @@
   font-size: 1.5rem;
 }
 
-.col .image {
+/* .col .image {
   width: 70%;
   height: 50%;
   margin: 1rem auto;
   align-items: center;
-}
+} */
 
 .image img {
   width: 100%;
